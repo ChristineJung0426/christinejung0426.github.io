@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snowflake Generator — Christine Jung</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">Tech Art &nbsp;·&nbsp; Houdini</p>
+      <h1 class="project-title">Snowflake Generator</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Houdini</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Type</span>
+          <span class="meta-value">Houdini Digital Asset (HDA) — Cellular Growth Simulation</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>A parametric snowflake generator based on cellular growth simulation.</h2>
+        <p>Referenced the paper <em>"A local cellular model for snow crystal growth"</em> (Clifford A. Reiter) to simulate how snowflakes grow. Exposed parameters include Alpha (weighting factor / center seed cell diffusion weight), Beta (background level / distance from initial cell), and Gamma (constant added to the growth of surrounding cells).</p>
+        <div class="tag-row">
+          <span class="tag">Houdini</span>
+          <span class="tag">Cellular Simulation</span>
+          <span class="tag">HDA</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="Images/SnowFlakeGrowth_Thumbnail.gif" alt="Snowflake growth simulation">
+        </figure>
+      </div>
+      <div class="gallery gallery-1" style="margin-top: 1.5rem;">
+        <figure class="gallery-item">
+          <img src="Images/euihyunj_asst3_sshot1_lable.png" alt="Snowflake parameter variations">
+          <figcaption>Parameter variations — Alpha, Beta, Gamma controls</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

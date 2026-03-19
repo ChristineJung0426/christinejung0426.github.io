@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipe Overflow — Christine Jung</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Rapid Prototyping &nbsp;·&nbsp; BVW Experiment</p>
+      <h1 class="project-title">Pipe Overflow</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Hardware</span>
+          <span class="meta-value">Oculus Quest 2</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">2 weeks</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unity</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>Designing for Spatial Constraints & Diegetic UI</h2>
+        <p>Designed a compelling VR experience under strict physical room-scale constraints — zero locomotion, fully diegetic interaction system within arm's reach.</p>
+        <div class="tag-row">
+          <span class="tag">Diegetic UI</span>
+          <span class="tag">VR</span>
+          <span class="tag">Spatial Constraints</span>
+          <span class="tag">Unity</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/-anXakTOESQ" title="Pipe Overflow — Full Experience" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="caption-standalone">Full Experience</p>
+    </section>
+
+    <section class="case-section">
+
+      <div class="callout">
+        <div class="callout-label">The Challenge</div>
+        <p>Designing a compelling VR experience with zero locomotion (movement) due to strict physical room-scale constraints.</p>
+      </div>
+
+      <div class="callout callout-solution">
+        <div class="callout-label">Prototyping Strategy</div>
+        <p><strong>Diegetic UI & Interaction Hub:</strong> Instead of standard VR movement, I constrained the player to a stationary "CCTV Control Room" operator role. I designed an interactive control panel board where all interactions (pressing buttons, pulling levers) were diegetic and within arm's reach.</p>
+        <p style="margin-top: 0.75rem;"><strong>Rapid Execution:</strong> Sketched the core interaction flow, created functional 3D blockouts, and worked alongside engineers to connect visual feedback to interaction logic — fully conceptualizing and testing the environment within a 2-week timeframe.</p>
+      </div>
+
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/Project1_sketch.webp" alt="Day 1 idea sketch">
+          <figcaption>Day 1: Idea sketch</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/Project1_sketch2.webp" alt="Day 1 storyboard">
+        </figure>
+      </div>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Project1_day2_env.webp" alt="Day 2 environment blockout">
+          <figcaption>Day 2: Environment</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/Project1_Day4_unity.webp" alt="Day 4 Unity scene">
+          <figcaption>Day 4: Unity scene</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/Project1_day4_unity2.webp" alt="Day 4 Unity scene — second view">
+        </figure>
+      </div>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Project1_interaction1.gif" alt="Final diegetic interaction">
+          <figcaption>Final interaction</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Project1_interaction2.gif" alt="Final interaction — second angle">
+          <figcaption>Final interaction</figcaption>
+        </figure>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swampocalypse VR — Christine Jung</title>
+  <!-- Apercu Pro loaded via @font-face in style.css -->
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Cover — full width, pushed below nav -->
+  <div class="project-cover" style="max-width:100%; margin-top:var(--nav-h); max-height:38vh; overflow:hidden;">
+    <img src="images/SwampocalypseVR_Cover.webp" alt="Swampocalypse VR — motion-simulated VR experience" style="width:100%; display:block; object-fit:cover; max-height:38vh;">
+  </div>
+
+  <!-- Hero -->
+  <header>
+    <div class="project-hero" style="padding-top: 3rem; max-width:1240px;">
+      <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Motion Simulation</p>
+      <h1 class="project-title">Swampocalypse VR: Motion Simulated VR</h1>
+      <p style="font-size:1.15rem; font-weight:600; color:var(--text); margin-bottom:1.5rem;">Spatial UX &amp; Interaction Overhaul (The "Fixer" Role)</p>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Creative Director &amp; Environment Artist</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unity, Maya</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Hardware</span>
+          <span class="meta-value">Meta Quest, Qubic QS-S25 Motion Simulator</span>
+        </div>
+      </div>
+      <div class="project-meta-grid" style="margin-top:0.5rem;">
+        <div class="project-meta-item">
+          <span class="meta-label">Awards</span>
+          <span class="meta-value">Selected for Games for Good 2025, UM Research Grant 2025</span>
+        </div>
+      </div>
+      <p style="font-weight:700; color:var(--accent); margin-top:1rem; font-size:0.95rem;">Soon to be published on Steam!</p>
+      <div class="project-awards">
+        <span class="award-badge">Games for Good 2025</span>
+        <span class="award-badge">UM Research Grant 2025</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <!-- About the Project -->
+    <div class="project-about">
+      <div class="project-about-body">
+        <h2>About the Project</h2>
+        <p>
+          <strong>Swampocalypse VR</strong> is an immersive airboat experience designed to raise environmental
+          awareness about the Florida Everglades. By integrating a Meta Quest headset with a
+          <strong>6-DOF physical motion simulator (Qubic QS-S25)</strong>, we created a highly visceral journey
+          where players battle mutant invasive species and restore the ecosystem.
+        </p>
+      </div>
+      <div class="gallery gallery-1" style="margin-top:2rem;">
+        <figure class="gallery-item">
+          <img src="images/SwampocalypseVR_MainReaction.gif" alt="Player reaction during live gameplay">
+          <figcaption>Player reaction during live session</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- The Challenge Overview -->
+    <section class="case-section">
+      <div class="section-num">01</div>
+      <h2>The Challenge: Solving Spacial Computing Friction</h2>
+      <p>
+        I joined the team mid-development to rescue an experience that was struggling with severe
+        spatial UX and comfort issues. Early playtests revealed that simply bringing 2D UI paradigms into
+        a 6-DOF motion-simulated VR environment caused critical friction.
+      </p>
+      <h3>My Approach: Rapid Prototyping &amp; Cross-Functional Collaboration</h3>
+      <p>
+        As the bridge between design and engineering, I redesigned the core interactive loops and
+        collaborated closely with the engineering team to rapidly implement, debug, and iterate on solutions.
+      </p>
+    </section>
+
+    <!-- Challenge 1: Onboarding -->
+    <section class="case-section">
+      <div class="section-num">02</div>
+      <h2>Challenge 1 — Cognitive Overload &amp; Skipped Onboarding</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Players ignored floating 2D pop-ups and voiceovers, failing to learn basic locomotion. They skipped the tutorial entirely, leading to confusion and frustration ("How do I move?").</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Forced-Engagement Tutorial</div>
+        <p>I redesigned the onboarding flow with <strong>karaoke-style highlighted subtitles</strong> and a physical <strong>"Shoot to Continue" interactive button</strong> — requiring active player engagement and guaranteeing they understood the core mechanics before the game started.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Karaoke%20style%20subtitles%20and%20Shoot%20to%20continue%20button.gif" alt="Karaoke-style subtitles and Shoot to Continue button">
+          <figcaption>Karaoke style subtitles and "Shoot to continue" button</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenge 2: Cluttered FOV -->
+    <section class="case-section">
+      <div class="section-num">03</div>
+      <h2>Challenge 2 — Cluttered FOV (Field of View)</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Screen-space UI blocked the player's spatial awareness, breaking immersion. The existing 2D UI was visually appealing but <strong>obscured the majority of the player's field of view</strong>.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Spatial Dashboard (Diegetic UI)</div>
+        <p>I conceptualized moving the intrusive floating UI into the <strong>diegetic space</strong>. We created a virtual monitor inside the airboat cockpit, allowing players to naturally look down to check their stats and information — maximizing the immersive spatial view.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/oldUI.png" alt="Old UI obscuring majority of view">
+          <figcaption>Old UI (Done by Sidney Cocimano), obscuring majority of view</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Monitor_PlayerLookingDown.gif" alt="Monitor implemented, player looking down">
+          <figcaption>Monitor implemented, player looking down to check on monitor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenge 3: Motion Sickness -->
+    <section class="case-section">
+      <div class="section-num">04</div>
+      <h2>Challenge 3 — VR Motion Sickness</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>A mismatch between the physical Qubic QS-S25 rig movements and visual acceleration caused <strong>severe discomfort</strong>. Players experienced nausea during amplified head rotations.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Rig Calibration &amp; Dynamic Vignetting</div>
+        <p>Led internal calibration sessions to fine-tune the Qubic motion rig's responsiveness. Iterated on the airboat's virtual speed and camera motion based on qualitative feedback, successfully bridging the sensory gap.</p>
+        <p style="margin-top:0.75rem;"><strong>Research-Backed Comfort Mechanics:</strong> Inspired by existing research on VR locomotion, I conceptualized a <strong>dynamic vignetting effect</strong> triggered during amplified head rotations. Collaborated with the engineering team to implement it, which successfully reduced nausea and received overwhelmingly positive user feedback.</p>
+      </div>
+      <p style="font-style:italic; color:var(--text-faint); margin-top:1rem;">
+        <em>Assessing Vignetting as a Means to Reduce VR Sickness During Amplified Head Rotations — N Norouzi</em>
+      </p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/VignetteEffect.gif" alt="Dynamic vignette effect to reduce motion sickness">
+          <figcaption>Vignette effect to reduce motion sickness</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenge 4: Wayfinding -->
+    <section class="case-section">
+      <div class="section-num">05</div>
+      <h2>Challenge 4 — Spatial Wayfinding</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Players easily lost their sense of direction in the <strong>homogenous 360° swamp environment</strong>, frequently getting lost in the vast levels.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Environmental Signposting &amp; Spatial UI</div>
+        <p>I integrated environmental signposting (e.g., in-world signs and spatial UI markers). These served as <strong>clear visual landmarks</strong>, intuitively guiding players through the levels and toward the destination without breaking immersion.</p>
+      </div>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/UIMarkers_Pathfinding.png" alt="UI markers for pathfinding">
+          <figcaption>UI markers</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/SignPost_PathFinding.png" alt="Signpostings in scene">
+          <figcaption>Signpostings in scene</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Narrative Mechanics -->
+    <section class="case-section">
+      <div class="section-num">06</div>
+      <h2>Translating Narrative into Interactive Mechanics</h2>
+      <p>
+        As the Creative Director, I designed core gameplay mechanics to ensure the environmental
+        message ("Eco-Repair") was felt through actions, not just words:
+      </p>
+      <div class="callout callout-solution">
+        <div class="callout-label">Eco-System Penalty (Negative Feedback)</div>
+        <p>Implemented a behavioral loop where shooting native wildlife (e.g., alligators) triggers a temporary <strong>'freeze' penalty</strong> and an NPC warning message. This trains players to consciously identify targets.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Interactive Flora (Metaphor for Restoration)</div>
+        <p>When shot, specific plant assets <strong>scatter seeds throughout the environment</strong> — a direct interactive metaphor for restoring the ecosystem.</p>
+      </div>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/penalty_ShootingNativeAnimals.png" alt="Eco-system penalty mechanic">
+          <figcaption>Penalty: shooting native wildlife triggers freeze</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/InteractiveFlora.png" alt="Interactive flora scattering seeds">
+          <figcaption>Interactive flora — seeds scatter when shot</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Level Design & World Building -->
+    <section class="case-section">
+      <div class="section-num">07</div>
+      <h2>Challenge 5 — Lack of Visual Pacing</h2>
+
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Homogenous environments with <strong>no clear progression</strong>. Every level looked the same, making the experience feel monotonous and directionless.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Intentional Level Design &amp; World Building</div>
+        <p>Completely revamped the dull, homogenous scenes into <strong>distinct, emotionally driven levels</strong> with clear visual pacing and progression.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/oldEnvironment.png" alt="Old environment before overhaul">
+          <figcaption>Old scene — before I joined</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/NewEnvironment1.png" alt="New day level">
+          <figcaption>Day (cloudy) level</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/NewEnvironment3.png" alt="New night level">
+          <figcaption>Night level</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/NewEnvironment4_Bossfight.png" alt="Boss fight level">
+          <figcaption>Boss fight level</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Playtesting & Results -->
+    <section class="case-section">
+      <div class="section-num">08</div>
+      <h2>Playtesting &amp; User Research</h2>
+      <p>
+        Designed and executed a multi-stage playtesting pipeline: Internal Calibration → Closed-group tests → Public sessions.
+        Metrics tracked included Presence/Immersion, Engagement (mission completion rates), and Comfort.
+      </p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Playtesting.png" alt="Public playtesting session">
+          <figcaption>Public playtesting session</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">&copy; 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Christine Jung</title>
+  <!-- Apercu Pro loaded via @font-face in style.css -->
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Cover image — full bleed, above title, ~38vh -->
+  <div class="project-cover" style="max-width:100%; margin-top:var(--nav-h); max-height:38vh; overflow:hidden;">
+    <img src="images/flow_cover.webp" alt="Flow — Interactive Immersive Experience" style="width:100%; display:block; object-fit:cover; max-height:38vh;">
+  </div>
+
+  <!-- Hero -->
+  <header>
+    <div class="project-hero" style="padding-top: 3rem;">
+      <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Immersive Experience</p>
+      <h1 class="project-title">Flow: Interactive<br>Immersive Experience</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Technical Environment Artist &amp; XR Prototyper</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unreal Engine 5, Houdini, Maya, Custom Shaders</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Hardware</span>
+          <span class="meta-value">Azure Kinect, Vive Trackers</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">5 months &nbsp;·&nbsp; Team of 6</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Playtesting</span>
+          <span class="meta-value">70+ sessions &nbsp;·&nbsp; 100+ guests</span>
+        </div>
+      </div>
+      <div class="project-awards">
+        <span class="award-badge">Innovation Awards Finalist — SXSW 2025</span>
+        <span class="award-badge">Award of Excellence — Communication Arts Interactive Annual 2025</span>
+        <span class="award-badge">SONA Immersive Storytelling Festival</span>
+        <span class="award-badge">Showcase — Shenzhen, China</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <!-- About -->
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>A controller-free journey through a folklore-inspired world</h2>
+        <p>
+          Flow is an immersive interactive experience that takes guests on a spiritual journey
+          through a folklore-inspired world. Utilizing a 270-degree curved projection screen and
+          multiple body-tracking devices (Azure Kinect), players use full-body gestures to interact
+          with the narrative — no controllers required.
+        </p>
+        <p>
+          Over 5 months, we conducted 70+ playtest sessions with 100+ guests, continuously
+          iterating on the physical-to-virtual interactions based on user data. My primary
+          contributions spanned technical environment art, custom shader development, and
+          spatial UX design.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Unreal Engine 5</span>
+          <span class="tag">Houdini</span>
+          <span class="tag">Custom Shaders</span>
+          <span class="tag">Azure Kinect</span>
+          <span class="tag">Body Tracking</span>
+          <span class="tag">270° Projection</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Demo Video -->
+    <section class="case-section">
+      <div class="section-num">Demo</div>
+      <h2>Experience Demo</h2>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/GQl9BZ6b3zA" title="Flow Demo Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Flow — Full Demo Video</p>
+    </section>
+
+    <!-- Narrative Design -->
+    <section class="case-section">
+      <div class="section-num">01</div>
+      <h2>Narrative & Experience Design</h2>
+      <p>
+        The goal was to create an emotionally resonant interactive story where guests intuitively
+        use body gestures to help the main characters — without standard controllers.
+      </p>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/flow%20experience%20design.jpg" alt="Initial rough sketches for narrative pacing">
+          <figcaption>Initial rough sketches to brainstorm narrative pacing and 270° spatial interaction before moving into the engine</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/Flow_ideaBrainstorming.jpg" alt="Experience design brainstorm">
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/NarrativeCurve.png" alt="Final narrative structure with interest curve">
+          <figcaption>Final narrative structure with interest curve</figcaption>
+        </figure>
+      </div>
+      <div class="callout">
+        <div class="callout-label">Design Approach</div>
+        <p><strong>Spatial Partitioning:</strong> By dividing the massive 270-degree screen into <strong>three distinct interactive zones</strong>, we optimized the spatial layout to seamlessly match the pacing of the story and user inputs.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/conceptArt1.png" alt="Concept art by Ashling Tu — scenes 1 & 2">
+          <figcaption>Concept art — Ashling Tu</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/ConceptArt2.png" alt="Concept art by Ashling Tu — scenes 3 & 4">
+          <figcaption>Concept art — Ashling Tu</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenge 1 -->
+    <section class="case-section">
+      <div class="section-num">02</div>
+      <h2>Challenge 1 — Lack of Intuitive Affordances</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Early playtests revealed that guests felt stuck. The system <strong>lacked sufficient feedback</strong>, leaving players unsure of when and how to interact using their bodies.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution 1: Onboarding (Pre-show)</div>
+        <p>Designed a live tutorial phase where a host guided guests into the environment, teaching them core gestures associated with elemental powers.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Preshow_Host.png" alt="Host guiding guests in the pre-show tutorial">
+          <figcaption>Pre-show: Host teaching guests core gestures with the lantern prop</figcaption>
+        </figure>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution 2: Blinking Outline Shader</div>
+        <p>To provide non-intrusive UI cues, I developed and implemented a <strong>blinking outline shader</strong> on interactable objects. Combined with the virtual character's movement hints, this clearly indicated interaction opportunities and completely resolved user confusion.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Tree_Outline.gif" alt="Blinking outline shader on tree">
+          <figcaption>Blinking outline shader — tree interaction</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Firepit_Outline.gif" alt="Blinking outline shader on firepit">
+          <figcaption>Blinking outline shader when interaction is needed</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenge 2 -->
+    <section class="case-section">
+      <div class="section-num">03</div>
+      <h2>Challenge 2 — Scattered Focus in a 270° Environment</h2>
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>The massive scale of the curved screen <strong>distracted guests</strong>. Players often looked at the wrong sections, missing key narrative moments and failing to perform gestures in time.</p>
+      </div>
+      <div class="callout callout-solution">
+        <div class="callout-label">Solution: Dynamic Fog as a Spatial UX Tool</div>
+        <p>I conceptualized and created a <strong>Dynamic Fog shader</strong> that dynamically controlled the player's Field of View (FOV) — subtly obscuring non-active areas and naturally guiding their attention to the active interaction zone.</p>
+        <p style="margin-top: 0.75rem;"><strong>Result:</strong> Combined with visual affordances, <strong>100% of playtesters</strong> successfully navigated the experience without confusion.</p>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/S3_FogBlocking.gif" alt="Fog blocking areas 2 and 3 so guests focus on area 1">
+          <figcaption>Fog blocking area 2 and 3 so the guest can focus on area 1</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/S3_FogClearing.gif" alt="Fog clearing when characters enter area 2">
+          <figcaption>Fog clearing when the characters enter area 2</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Playtesting -->
+    <section class="case-section">
+      <div class="section-num">04</div>
+      <h2>Playtesting & Cross-Functional Iteration</h2>
+      <ul>
+        <li>
+          <strong>Data-Driven Iteration:</strong> Co-facilitated 70+ playtest sessions with 100+
+          guests. Documented qualitative feedback and collaborated closely with engineers to refine
+          the interaction mechanics and narrative pacing.
+        </li>
+        <li>
+          <strong>Hardware & UX Integration:</strong> Brainstormed and tested paradigm-shifting
+          inputs with the engineering team — such as attaching a Vive Tracker to a physical lantern,
+          successfully bridging the gap between tactile props and virtual interactions.
+        </li>
+      </ul>
+      <div class="gallery gallery-2-1">
+        <figure class="gallery-item">
+          <img src="images/Preshow_Host.png" alt="Host using lantern and Vive tracker in the pre-show scene">
+          <figcaption>Host using lantern + Vive tracker to light up the Pre-show scene</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/physicalLantern.png" alt="Physical lantern prop with Vive tracker mounted">
+          <figcaption>Physical lantern with Vive tracker attached</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/HandParticle.png" alt="Hand indicator particle for intuitive interaction">
+          <figcaption>Another solution for more intuitive interaction: Hand indicator particle</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/programmerTestingHandParticle.gif" alt="Programmer testing hand particle">
+          <figcaption>Programmer testing the hand particle system</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-2 gallery-natural" style="align-items: center;">
+        <figure class="gallery-item">
+          <img src="images/mocap.gif" alt="Motion capture session with CS department" style="max-height: 350px; width: auto; margin: 0 auto;">
+          <figcaption>Mocap sessions with help from CS department</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/MocapInScene.gif" alt="Motion capture data applied in Unreal Engine scene">
+          <figcaption>Mocap data applied to character animations in-engine</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- World Building & Tech Art -->
+    <section class="case-section">
+      <div class="section-num">05</div>
+      <h2>Immersive World-Building & Tech Art</h2>
+      <ul>
+        <li><strong>Environment & VFX:</strong> Built highly immersive scenes in UE5 and developed
+        various visual effects (water shaders, weather systems, character VFX) to enhance the
+        emotional storytelling.</li>
+        <li><strong>Procedural Workflows:</strong> Built procedural natural asset generators
+        (mountains, rocks, ivy) using Houdini to rapidly populate the virtual world.</li>
+        <li><strong>Motion Capture Pipeline:</strong> Configured the initial pipeline to import
+        and apply motion capture data into Unreal Engine for character animations.</li>
+      </ul>
+
+      <h3>Virtual Environment Setup</h3>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/S3_Environment.png" alt="Virtual environments in different seasons — Spring, Summer, Fall, Winter">
+          <figcaption>Environments in different seasons</figcaption>
+        </figure>
+      </div>
+
+      <h3>Final Interaction — Scene 3</h3>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/uqy-MjZYRzk" title="Flow Final Interaction Scene 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Final Interaction Demo — Scene 3</p>
+
+      <h3>VFX & Shader</h3>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/VFX_DeerShader.gif" alt="Deer VFX and shader">
+          <figcaption>Deer VFX &amp; Shader</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/VFX_FlowerPetal.gif" alt="Flower petal VFX">
+          <figcaption>Flower Petal VFX</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/VFX_Sway.gif" alt="Foliage sway VFX">
+          <figcaption>Sway Effect</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/VFX_FallingLeaves.gif" alt="Falling leaves VFX">
+          <figcaption>Falling Leaves</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/VFX_Water.gif" alt="Water shader">
+          <figcaption>Water Shader</figcaption>
+        </figure>
+      </div>
+
+      <h3>Procedural Natural Assets</h3>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/PCG_Mountain.png" alt="Procedural mountain generated in Houdini">
+          <figcaption>Mountain</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/PCG_Rocks.png" alt="Procedural rocks generated in Houdini">
+          <figcaption>Rocks</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/PCG_Ivy.gif" alt="Procedural ivy — Houdini node graph">
+          <figcaption>Procedural Ivy — Houdini</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Footer -->
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

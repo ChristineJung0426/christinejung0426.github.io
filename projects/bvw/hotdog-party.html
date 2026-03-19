@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotdog Party — Christine Jung</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Rapid Prototyping &nbsp;·&nbsp; BVW Experiment</p>
+      <h1 class="project-title">Hotdog Party</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Hardware</span>
+          <span class="meta-value">3D Rudder (Foot Controller), Vive Trackers (Hands)</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">1 week</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unity</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>Asymmetric Hardware Co-op — splitting locomotion and manipulation between two players</h2>
+        <p>Designed an intentionally challenging cooperative loop that forces communication by splitting locomotion and manipulation between two players using completely different hardware.</p>
+        <div class="tag-row">
+          <span class="tag">Asymmetric Co-op</span>
+          <span class="tag">Vive Trackers</span>
+          <span class="tag">3D Rudder</span>
+          <span class="tag">Unity</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/6HbCli2DESk" title="Hotdog Party — Full Experience" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="caption-standalone">Full Experience</p>
+    </section>
+
+    <section class="case-section">
+
+      <div class="callout">
+        <div class="callout-label">The Challenge</div>
+        <p>Designing an intentionally challenging cooperative loop that forces communication by splitting locomotion and manipulation between two players.</p>
+      </div>
+
+      <div class="callout callout-solution">
+        <div class="callout-label">Prototyping Strategy</div>
+        <p><strong>Intentional Friction for Social Interaction:</strong> Distributed the cognitive load by assigning the foot controller (movement) to Player A and the hand trackers (object manipulation) to Player B. This required them to constantly communicate to navigate and survive.</p>
+        <p style="margin-top: 0.75rem;"><strong>Rapid Balancing:</strong> Iterated daily on movement speed and interaction bounding boxes based on playtests to ensure the "frustration" translated into fun, engaging social cooperation rather than an unplayable experience.</p>
+      </div>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Project2_Sketch.JPG.png" alt="Day 1 brainstorming asymmetric mechanics">
+          <figcaption>Day 1: Brainstorming</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Project2_testing.gif" alt="Testing mustard squeeze mechanics with Vive Trackers">
+          <figcaption>Day 6: Testing mustard squeeze mechanics with Vive Trackers</figcaption>
+        </figure>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

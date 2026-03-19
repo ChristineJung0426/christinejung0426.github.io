@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Arctic Epoch — Christine Jung</title>
+  
+  
+  <!-- Apercu Pro loaded via @font-face in style.css -->
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">3D Art &nbsp;·&nbsp; Environment Tech &amp; Shaders</p>
+      <h1 class="project-title">The Arctic Epoch</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unreal Engine 5, Houdini</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Techniques</span>
+          <span class="meta-value">Procedural Snow Generator, Icicle Generator, Custom Shaders</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="project-cover arctic-gradient" style="max-width:100%; border-bottom:1px solid var(--border);">
+    <!-- Replace with: <img src="images/cover.jpg" alt="The Arctic Epoch"> -->
+  </div>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>Procedural snow and icicle systems inside a moody dystopian cityscape</h2>
+        <p>
+          The Arctic Epoch is an environment tech project focused on building procedural systems
+          for winter environments. A Houdini-based snow generator and icicle generator drive the
+          look of a dystopian frozen city, with custom shaders handling material response to snow
+          accumulation.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Unreal Engine 5</span>
+          <span class="tag">Houdini</span>
+          <span class="tag">Procedural Snow</span>
+          <span class="tag">Icicle Generator</span>
+          <span class="tag">Shader Development</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="section-num">Environment</div>
+      <h2>Final Renders</h2>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <!-- <img src="images/hero.jpg" alt="Arctic Epoch hero"> -->
+          <div class="img-placeholder" style="aspect-ratio:21/9;">Hero render — add image</div>
+        </figure>
+      </div>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <!-- <img src="images/render-01.jpg" alt="City render"> -->
+          <div class="img-placeholder">City render — add image</div>
+        </figure>
+        <figure class="gallery-item">
+          <!-- <img src="images/render-02.jpg" alt="Snow detail"> -->
+          <div class="img-placeholder">Snow detail — add image</div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-num">Procedural Systems</div>
+      <h2>Snow & Icicle Generators</h2>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <!-- <img src="images/snow-houdini.jpg" alt="Snow generator in Houdini"> -->
+          <div class="img-placeholder">Snow generator — Houdini — add image</div>
+          <figcaption>Procedural snow generator — Houdini network</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <!-- <img src="images/icicle-houdini.jpg" alt="Icicle generator in Houdini"> -->
+          <div class="img-placeholder">Icicle generator — Houdini — add image</div>
+          <figcaption>Icicle generator — Houdini network</figcaption>
+        </figure>
+      </div>
+      <div class="gallery gallery-3">
+        <figure class="gallery-item">
+          <!-- <img src="images/snow-close.jpg" alt="Snow close-up"> -->
+          <div class="img-placeholder">Snow close-up — add image</div>
+          <figcaption>Snow accumulation on surface</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <!-- <img src="images/icicle-close.jpg" alt="Icicle close-up"> -->
+          <div class="img-placeholder">Icicle close-up — add image</div>
+          <figcaption>Icicle formation detail</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <!-- <img src="images/shader.jpg" alt="Snow shader"> -->
+          <div class="img-placeholder">Snow shader — add image</div>
+          <figcaption>Custom snow accumulation shader</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>

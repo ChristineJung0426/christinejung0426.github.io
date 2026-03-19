@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legos — Christine Jung</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../index.html#about">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">3D Art &nbsp;·&nbsp; Props &amp; Surfacing</p>
+      <h1 class="project-title">Legos</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">2021</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Maya, ZBrush, Substance Painter, VRay</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>A realistic translucent 3D scene of piled Legos.</h2>
+        <p>The legos are made based on their actual size and are real products, rendered to showcase iridescent translucent material properties.</p>
+        <div class="tag-row">
+          <span class="tag">Maya</span>
+          <span class="tag">ZBrush</span>
+          <span class="tag">Substance Painter</span>
+          <span class="tag">VRay</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/cbV0MJhZILw" title="Lego Turntable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="caption-standalone">Turntable</p>
+    </section>
+
+    <section class="case-section">
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="Images/lego.jpg" alt="Legos final render">
+        </figure>
+      </div>
+      <div class="gallery gallery-1" style="margin-top: 1.5rem;">
+        <figure class="gallery-item">
+          <img src="Images/lego_reference.jpg" alt="Lego reference">
+          <figcaption>Reference</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>
