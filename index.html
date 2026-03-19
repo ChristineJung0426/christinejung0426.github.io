@@ -126,7 +126,7 @@
             <div class="card-img-bg flow-gradient"></div>
             <img src="projects/flow/images/flow_cover.webp" alt="Flow — Interactive Immersive Experience" class="card-img">
             <div class="card-hover-overlay"></div>
-            <img src="projects/flow/images/FlowTrailer_1.gif" alt="" class="card-img-hover">
+            <video src="projects/flow/images/FlowTrailer_1.mp4" muted loop playsinline class="card-img-hover"></video>
             <span class="card-badge badge-gold">Award Winning</span>
           </div>
           <div class="card-body">
@@ -152,7 +152,7 @@
             <div class="card-img-bg swamp-gradient"></div>
             <img src="projects/swampocalypse/images/Swampocalypse_Thumbnail.avif" alt="Swampocalypse VR" class="card-img">
             <div class="card-hover-overlay"></div>
-            <img src="projects/swampocalypse/images/SwampocalypseVR_MainReaction.gif" alt="" class="card-img-hover">
+            <video src="projects/swampocalypse/images/SwampocalypseVR_MainReaction.mp4" muted loop playsinline class="card-img-hover"></video>
             <span class="card-badge badge-gold">Games for Good 2025</span>
           </div>
           <div class="card-body">
@@ -719,6 +719,14 @@
     });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Play/pause hover videos
+    document.querySelectorAll('.card-img-wrap').forEach(wrap => {
+      const vid = wrap.querySelector('video.card-img-hover');
+      if (!vid) return;
+      wrap.addEventListener('mouseenter', () => vid.play());
+      wrap.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+    });
   </script>
 </body>
 </html>
