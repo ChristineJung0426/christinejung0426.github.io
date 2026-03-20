@@ -3,4 +3,6 @@
 VR:XR/
 3D:TechArt/
 *.rtf
-*.gif
+# Large hover GIFs replaced by MP4
+projects/flow/images/FlowTrailer_1.gif
+projects/swampocalypse/images/SwampocalypseVR_MainReaction.gif
