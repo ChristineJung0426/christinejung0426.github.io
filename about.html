@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1400" />
+  <title>About — Christine Jung</title>
+  <meta name="description" content="About Christine Jung — VR Prototyper, Experience Designer, and 3D Artist." />
+  <link rel="icon" href="images/christinejung-favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── About Page Specific ── */
+    .about-page { padding-top: calc(var(--nav-h, 72px) + 60px); }
+
+    /* Tagline */
+    .about-tagline {
+      max-width: 900px;
+      margin: 0 auto 3.5rem;
+      padding: 0 5%;
+    }
+    .about-tagline blockquote {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Hero photo */
+    .about-hero-photo {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      padding: 0 5%;
+    }
+    .about-hero-photo img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 480px;
+    }
+    .about-hero-photo figcaption {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Body text sections */
+    .about-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+    .about-body h2 {
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      margin-top: 4rem;
+    }
+    .about-body h2:first-child { margin-top: 0; }
+    .about-body p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 1.1rem;
+    }
+
+    /* Experience & Education list */
+    .about-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-list li {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-list li:last-child { border-bottom: none; }
+    .about-list strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Recognition */
+    .about-recognition {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-recognition li {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      padding: 0.4rem 0;
+    }
+
+    /* Photo grid */
+    .about-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .about-photo-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* CTA */
+    .about-cta {
+      text-align: center;
+      padding: 5rem 5%;
+      margin-top: 4rem;
+      border-top: 1px solid var(--border);
+    }
+    .about-cta h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .about-cta p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .about-cta-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .about-cta-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      transition: background 0.25s, color 0.25s;
+    }
+    .about-cta-links a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Divider */
+    .about-divider {
+      max-width: 680px;
+      margin: 4rem auto 0;
+      padding: 0 5%;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Christine Jung</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html" class="active">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+      <a href="ChristineJung_Resume.pdf" target="_blank" class="nav-resume" id="resumeLink">Resume ↗</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="about-page">
+
+    <!-- Tagline -->
+    <section class="about-tagline">
+      <blockquote>The best immersive experiences don't feel designed — they feel discovered.</blockquote>
+    </section>
+
+    <!-- Hero Photo -->
+    <figure class="about-hero-photo">
+      <img src="images/sxswAward.jpeg" alt="Christine Jung at SXSW 2025" />
+      <figcaption>At SXSW 2025</figcaption>
+    </figure>
+
+    <!-- What I Do -->
+    <div class="about-body">
+      <h2>What I Do</h2>
+      <p>
+        I'm Christine, a VR Prototyper and Experience Designer based in Miami.
+      </p>
+      <p>
+        My work is driven by one goal: making the boundary between the real world and the experience disappear. Whether it's a controller-free XR installation, a motion-simulated VR ride, or a 1:1 scale theme park environment, I design for seamlessness — the moment you stop thinking about the technology and just exist inside the world.
+      </p>
+      <p>
+        I'm a 3D artist at heart — I build, texture, and light my own environments in Unreal and Unity, taking a prototype from rough concept to visually polished experience. My background in psychology shapes the rest: how people perceive space, where their attention goes, what breaks presence. I run playtests early, iterate often, and collaborate closely with engineers to bring ideas to life. If you notice the interface, the immersion is already broken.
+      </p>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- Experience -->
+    <div class="about-body">
+      <h2>Experience</h2>
+      <ul class="about-list">
+        <li><strong>University of Miami</strong> — Creative Director & Lecturer, 2024 – Present</li>
+        <li><strong>Future State University</strong> — Art Director / Technical Artist, 2025</li>
+        <li><strong>Universal Creative (Super Nintendo World)</strong> — Interactive Media Design Intern, 2023</li>
+      </ul>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- Education -->
+    <div class="about-body">
+      <h2>Education</h2>
+      <ul class="about-list">
+        <li><strong>Carnegie Mellon University</strong> — M.E.T., Entertainment Technology (3.93/4.0)</li>
+        <li><strong>Sogang University</strong> — B.A.S. Art & Technology; B.A. Psychology</li>
+      </ul>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- Recognition -->
+    <div class="about-body">
+      <h2>Recognition</h2>
+      <ul class="about-recognition">
+        <li>80LV Showcase Competition — 1st Place Winner, 2026</li>
+        <li>Communication Arts Interactive Competition — Winner, 2025</li>
+        <li>SXSW Innovation Awards — Finalist, 2025</li>
+        <li>Exhibited at Sona & international festivals</li>
+      </ul>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- Outside the Engine -->
+    <div class="about-body">
+      <h2>Outside the Engine</h2>
+      <p>
+        When I'm not prototyping, I'm usually behind a camera. I shoot travel, street, and food photography — it's how I slow down and pay attention to things. I bake focaccia I'm honestly proud of, cook dishes that are probably too ambitious for a weeknight, and a bag of fresh beans is the fastest way to make my day.
+      </p>
+      <div class="about-photo-grid">
+        <img src="images/travel.jpeg" alt="Travel photography" />
+        <img src="images/camera.jpeg" alt="Behind the camera" />
+        <img src="images/foccacia.jpeg" alt="Homemade focaccia" />
+        <img src="images/eggbenedict.jpeg" alt="Eggs benedict" />
+        <img src="images/coffeePourover.jpeg" alt="Pour-over coffee" />
+        <img src="images/friends.jpeg" alt="With friends" />
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="about-cta">
+      <h2>Want to work together?</h2>
+      <p>I'm always open to exciting projects and new collaborations.</p>
+      <div class="about-cta-links">
+        <a href="mailto:christineart426@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/christinejung426/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-logo">Christine Jung</p>
+        <p class="footer-sub">AR/VR Prototyper & 3D Artist</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:christineart426@gmail.com">christineart426@gmail.com</a>
+        <a href="https://www.linkedin.com/in/christinejung426/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Christine Jung</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
