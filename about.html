@@ -11,18 +11,19 @@
     /* ── About Page ── */
     .about-page {
       padding-top: calc(var(--nav-h, 72px) + 80px);
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
       padding-left: 5%;
       padding-right: 5%;
+      padding-bottom: 2rem;
     }
 
     /* ── Tagline ── */
     .about-tagline {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
     .about-tagline blockquote {
-      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
       font-weight: 300;
       line-height: 1.4;
       letter-spacing: -0.02em;
@@ -35,7 +36,7 @@
 
     /* ── Hero photo ── */
     .about-hero-photo {
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
     .about-hero-photo img {
       width: 100%;
@@ -51,93 +52,79 @@
 
     /* ── Intro text ── */
     .about-intro {
-      margin-bottom: 4.5rem;
+      margin-bottom: 4rem;
     }
     .about-intro p {
       font-size: 1rem;
       color: var(--text-muted);
       line-height: 1.9;
       margin-bottom: 1.1rem;
-      max-width: 720px;
     }
 
-    /* ── Section row (2-col: label | content) ── */
-    .about-section {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 2rem;
-      padding: 3rem 0;
-      border-top: 1px solid var(--border);
-    }
-    .about-section-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-faint);
-      padding-top: 0.15rem;
+    /* ── Section heading ── */
+    .about-section-title {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1rem;
+      margin-top: 0;
     }
 
-    /* ── Experience / Education entries ── */
-    .about-entry {
-      margin-bottom: 2rem;
+    /* ── Card block (grey rounded container) ── */
+    .about-card {
+      background: var(--surface-hi, #f5f5f5);
+      border-radius: 14px;
+      padding: 0.25rem 0;
+      margin-bottom: 3.5rem;
     }
-    .about-entry:last-child {
-      margin-bottom: 0;
-    }
-    .about-entry-header {
+
+    /* ── Row inside card ── */
+    .about-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.3rem;
+      padding: 1.15rem 1.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
-    .about-entry-org {
-      font-size: 1.05rem;
+    .about-row:last-child {
+      border-bottom: none;
+    }
+    .about-row-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .about-row-primary {
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text);
     }
-    .about-entry-date {
+    .about-row-secondary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .about-row-right {
       font-size: 0.85rem;
       color: var(--text-faint);
       white-space: nowrap;
-      margin-left: 1.5rem;
-    }
-    .about-entry-role {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .about-entry-detail {
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      margin-top: 0.2rem;
+      margin-left: 2rem;
+      text-align: right;
     }
 
-    /* ── Recognition entries ── */
-    .about-award {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.65rem 0;
-      border-bottom: 1px solid var(--border);
+    /* ── Education: org left, degree right ── */
+    .about-row-degree {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: right;
+      margin-left: 2rem;
+      max-width: 380px;
     }
-    .about-award:last-child {
-      border-bottom: none;
-    }
-    .about-award-name {
-      font-size: 0.95rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .about-award-meta {
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      white-space: nowrap;
-      margin-left: 1.5rem;
-    }
+
+    /* ── Award photo ── */
     .about-award-photo {
       margin-top: 1.5rem;
-      max-width: 400px;
+      margin-bottom: 3.5rem;
+      max-width: 440px;
     }
     .about-award-photo img {
       width: 100%;
@@ -151,61 +138,79 @@
       font-style: italic;
     }
 
-    /* ── Photo grid ── */
-    .about-photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 1.5rem;
-    }
-    .about-photo-grid img {
-      width: 100%;
-      border-radius: 10px;
-      display: block;
-    }
+    /* ── Personal section ── */
     .about-personal-text {
       font-size: 1rem;
       color: var(--text-muted);
       line-height: 1.9;
-      max-width: 720px;
+      margin-bottom: 1.5rem;
     }
 
-    /* ── CTA ── */
+    /* ── Photo grid (uniform cells) ── */
+    .about-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 3.5rem;
+    }
+    .about-photo-grid .photo-cell {
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+    .about-photo-grid .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── CTA (left-aligned, inline) ── */
     .about-cta {
-      text-align: center;
-      padding: 5rem 0;
-      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0;
       border-top: 1px solid var(--border);
     }
-    .about-cta h2 {
-      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-    .about-cta p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-    .about-cta-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .about-cta-links a {
-      font-size: 0.9rem;
+    .about-cta-text h2 {
+      font-size: 1.1rem;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--text);
+      margin: 0 0 0.3rem;
+    }
+    .about-cta-text p {
+      font-size: 0.9rem;
+      color: var(--text-faint);
+      margin: 0;
+    }
+    .about-cta-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .about-cta-actions a {
+      font-size: 0.85rem;
+      font-weight: 600;
       text-decoration: none;
-      padding: 0.6rem 1.5rem;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
+      padding: 0.65rem 1.6rem;
+      border-radius: 50px;
       transition: background 0.25s, color 0.25s;
     }
-    .about-cta-links a:hover {
-      background: var(--accent);
+    .about-cta-actions .cta-email {
+      background: var(--text);
       color: #fff;
+    }
+    .about-cta-actions .cta-email:hover {
+      background: var(--accent);
+    }
+    .about-cta-actions .cta-linkedin {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-hi);
+    }
+    .about-cta-actions .cta-linkedin:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
   </style>
 </head>
@@ -235,8 +240,8 @@
 
     <!-- Hero Photo -->
     <figure class="about-hero-photo">
-      <img src="images/VRtesting.jpeg" alt="Christine Jung testing VR" />
-      <figcaption>Me at work — testing in VR</figcaption>
+      <img src="images/VRtesting.jpeg" alt="Christine Jung demoing VR" />
+      <figcaption>Me at work — demoing Swampocalypse at Games for Good 2025</figcaption>
     </figure>
 
     <!-- What I Do -->
@@ -253,108 +258,95 @@
     </div>
 
     <!-- Experience -->
-    <div class="about-section">
-      <div class="about-section-label">Experience</div>
-      <div>
-        <div class="about-entry">
-          <div class="about-entry-header">
-            <span class="about-entry-org">University of Miami</span>
-            <span class="about-entry-date">2024 – Present</span>
-          </div>
-          <div class="about-entry-role">Creative Director & Lecturer</div>
+    <h3 class="about-section-title">Experience</h3>
+    <div class="about-card">
+      <div class="about-row">
+        <div class="about-row-left">
+          <span class="about-row-primary">University of Miami</span>
+          <span class="about-row-secondary">Creative Director & Lecturer</span>
         </div>
-        <div class="about-entry">
-          <div class="about-entry-header">
-            <span class="about-entry-org">Future State University</span>
-            <span class="about-entry-date">2025</span>
-          </div>
-          <div class="about-entry-role">Art Director / Technical Artist</div>
+        <span class="about-row-right">2024 – Present</span>
+      </div>
+      <div class="about-row">
+        <div class="about-row-left">
+          <span class="about-row-primary">Future State University</span>
+          <span class="about-row-secondary">Art Director / Technical Artist</span>
         </div>
-        <div class="about-entry">
-          <div class="about-entry-header">
-            <span class="about-entry-org">Universal Creative</span>
-            <span class="about-entry-date">2023</span>
-          </div>
-          <div class="about-entry-role">Interactive Media Design Intern</div>
-          <div class="about-entry-detail">Super Nintendo World</div>
+        <span class="about-row-right">2025</span>
+      </div>
+      <div class="about-row">
+        <div class="about-row-left">
+          <span class="about-row-primary">Universal Creative</span>
+          <span class="about-row-secondary">Interactive Media Design Intern · Super Nintendo World</span>
         </div>
+        <span class="about-row-right">2023</span>
       </div>
     </div>
 
     <!-- Education -->
-    <div class="about-section">
-      <div class="about-section-label">Education</div>
-      <div>
-        <div class="about-entry">
-          <div class="about-entry-header">
-            <span class="about-entry-org">Carnegie Mellon University</span>
-            <span class="about-entry-date">2023 – 2025</span>
-          </div>
-          <div class="about-entry-role">M.E.T., Entertainment Technology</div>
-          <div class="about-entry-detail">GPA 3.93 / 4.0</div>
+    <h3 class="about-section-title">Education</h3>
+    <div class="about-card">
+      <div class="about-row">
+        <div class="about-row-left">
+          <span class="about-row-primary">Carnegie Mellon University</span>
+          <span class="about-row-secondary">GPA 3.93 / 4.0</span>
         </div>
-        <div class="about-entry">
-          <div class="about-entry-header">
-            <span class="about-entry-org">Sogang University</span>
-          </div>
-          <div class="about-entry-role">B.A.S. Art & Technology · B.A. Psychology</div>
-        </div>
+        <span class="about-row-degree">M.E.T., Entertainment Technology</span>
+      </div>
+      <div class="about-row">
+        <span class="about-row-primary">Sogang University</span>
+        <span class="about-row-degree">B.A.S. Art & Technology · B.A. Psychology</span>
       </div>
     </div>
 
     <!-- Recognition -->
-    <div class="about-section">
-      <div class="about-section-label">Recognition</div>
-      <div>
-        <div class="about-award">
-          <span class="about-award-name">80LV Showcase Competition — 1st Place</span>
-          <span class="about-award-meta">2026</span>
-        </div>
-        <div class="about-award">
-          <span class="about-award-name">Communication Arts Interactive Competition — Winner</span>
-          <span class="about-award-meta">2025</span>
-        </div>
-        <div class="about-award">
-          <span class="about-award-name">SXSW Innovation Awards — Finalist</span>
-          <span class="about-award-meta">2025</span>
-        </div>
-        <div class="about-award">
-          <span class="about-award-name">Exhibited at Sona & international festivals</span>
-          <span class="about-award-meta"></span>
-        </div>
-
-        <figure class="about-award-photo">
-          <img src="images/sxswAward.jpeg" alt="Christine Jung at SXSW 2025" />
-          <figcaption>At SXSW Innovation Awards 2025</figcaption>
-        </figure>
+    <h3 class="about-section-title">Recognition</h3>
+    <div class="about-card">
+      <div class="about-row">
+        <span class="about-row-primary">80LV Showcase Competition — 1st Place</span>
+        <span class="about-row-right">2026</span>
+      </div>
+      <div class="about-row">
+        <span class="about-row-primary">Communication Arts Interactive Competition — Winner</span>
+        <span class="about-row-right">2025</span>
+      </div>
+      <div class="about-row">
+        <span class="about-row-primary">SXSW Innovation Awards — Finalist</span>
+        <span class="about-row-right">2025</span>
+      </div>
+      <div class="about-row">
+        <span class="about-row-primary">Exhibited at Sona & international festivals</span>
+        <span class="about-row-right"></span>
       </div>
     </div>
 
+    <figure class="about-award-photo">
+      <img src="images/sxswAward.jpeg" alt="Christine Jung at SXSW 2025" />
+      <figcaption>At SXSW Innovation Awards 2025</figcaption>
+    </figure>
+
     <!-- Outside the Engine -->
-    <div class="about-section">
-      <div class="about-section-label">Outside the Engine</div>
-      <div>
-        <p class="about-personal-text">
-          When I'm not prototyping, I'm usually behind a camera. I shoot travel, street, and food photography — it's how I slow down and pay attention to things. I bake focaccia I'm honestly proud of, cook dishes that are probably too ambitious for a weeknight, and a bag of fresh beans is the fastest way to make my day.
-        </p>
-        <div class="about-photo-grid">
-          <img src="images/travel.jpeg" alt="Travel photography" />
-          <img src="images/camera.jpeg" alt="Behind the camera" />
-          <img src="images/foccacia.jpeg" alt="Homemade focaccia" />
-          <img src="images/eggbenedict.jpeg" alt="Eggs benedict" />
-          <img src="images/coffeePourover.jpeg" alt="Pour-over coffee" />
-          <img src="images/friends.jpeg" alt="With friends" />
-        </div>
-      </div>
+    <h3 class="about-section-title">Outside the Engine</h3>
+    <p class="about-personal-text">
+      When I'm not prototyping, I'm usually behind a camera. I shoot travel, street, and food photography — it's how I slow down and pay attention to things. I bake focaccia I'm honestly proud of, cook dishes that are probably too ambitious for a weeknight, and a bag of fresh beans is the fastest way to make my day.
+    </p>
+    <div class="about-photo-grid">
+      <div class="photo-cell"><img src="images/camera.jpeg" alt="Photography" /></div>
+      <div class="photo-cell"><img src="images/foccacia.jpeg" alt="Homemade focaccia" /></div>
+      <div class="photo-cell"><img src="images/coffeePourover.jpeg" alt="Pour-over coffee" /></div>
+      <div class="photo-cell"><img src="images/travel.jpeg" alt="Travel" /></div>
+      <div class="photo-cell"><img src="images/friends.jpeg" alt="With friends" /></div>
     </div>
 
     <!-- CTA -->
     <section class="about-cta">
-      <h2>Want to work together?</h2>
-      <p>I'm always open to exciting projects and new collaborations.</p>
-      <div class="about-cta-links">
-        <a href="mailto:christineart426@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/christinejung426/" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="about-cta-text">
+        <h2>Interested in working together?</h2>
+        <p>Shoot me an email if you'd like to chat.</p>
+      </div>
+      <div class="about-cta-actions">
+        <a href="mailto:christineart426@gmail.com" class="cta-email">Email</a>
+        <a href="https://www.linkedin.com/in/christinejung426/" target="_blank" rel="noopener" class="cta-linkedin">LinkedIn</a>
       </div>
     </section>
 
