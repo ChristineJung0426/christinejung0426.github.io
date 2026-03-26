@@ -22,16 +22,21 @@
     .about-tagline {
       margin-bottom: 3rem;
     }
-    .about-tagline blockquote {
-      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-      font-weight: 300;
-      line-height: 1.4;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      border: none;
-      padding: 0;
+    .about-tagline-text {
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      color: var(--text-muted);
       margin: 0;
-      font-style: italic;
+    }
+    .about-tagline-text .tagline-highlight {
+      color: var(--text);
+      font-weight: 600;
+      background-image: linear-gradient(to right, rgba(124, 92, 191, 0.13), rgba(124, 92, 191, 0.13));
+      background-position: 0 88%;
+      background-size: 100% 30%;
+      background-repeat: no-repeat;
     }
 
     /* ── Hero photo ── */
@@ -235,7 +240,7 @@
 
     <!-- Tagline -->
     <section class="about-tagline">
-      <blockquote>The best immersive experiences don't feel designed — they feel discovered.</blockquote>
+      <p class="about-tagline-text"><span class="tagline-highlight">Blur the boundary.</span> That's when immersion begins.</p>
     </section>
 
     <!-- Hero Photo -->
@@ -334,8 +339,9 @@
       <div class="photo-cell"><img src="images/camera.jpeg" alt="Photography" style="object-position: center 65%;" /></div>
       <div class="photo-cell"><img src="images/foccacia.jpeg" alt="Homemade focaccia" /></div>
       <div class="photo-cell"><img src="images/coffeePourover.jpeg" alt="Pour-over coffee" /></div>
-      <div class="photo-cell"><img src="images/travel_cliff.jpeg" alt="Travel" /></div>
+      <div class="photo-cell"><img src="images/travel_cliff.jpeg" alt="Travel" style="object-position: center 65%;" /></div>
       <div class="photo-cell"><img src="images/friends.jpeg" alt="With friends" /></div>
+      <div class="photo-cell"><img src="images/eggbenedict.jpeg" alt="Eggs benedict" /></div>
     </div>
 
     <!-- CTA -->
