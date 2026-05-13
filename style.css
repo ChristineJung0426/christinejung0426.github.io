@@ -731,6 +731,8 @@ button {
 .props-gradient      { background: linear-gradient(140deg, #f0f0f0 0%, #e0e0e0 100%); }
 .daisy-gradient      { background: linear-gradient(140deg, #e4f0e0 0%, #c2ddb0 50%, #d5e8c8 100%); }
 .materials-gradient  { background: linear-gradient(140deg, #f0e8dc 0%, #e0d0b8 50%, #f0e5d5 100%); }
+.s-sho-gradient      { background: linear-gradient(140deg, #f5e4ec 0%, #e8b8cf 50%, #f0d0df 100%); }
+.viewdefi-gradient   { background: linear-gradient(140deg, #e4ecf5 0%, #b8c8e8 50%, #d0d8f0 100%); }
 
 /* Badges */
 .card-badge {

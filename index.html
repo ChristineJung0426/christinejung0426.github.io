@@ -115,6 +115,7 @@
         <div class="filters" role="tablist" aria-label="Filter projects">
           <button class="filter-btn active" data-filter="all" role="tab">All</button>
           <button class="filter-btn" data-filter="vrxr" role="tab">VR / XR</button>
+          <button class="filter-btn" data-filter="product" role="tab">Product Design</button>
           <button class="filter-btn" data-filter="3dart" role="tab">3D Art</button>
           <button class="filter-btn" data-filter="techart" role="tab">Tech Art</button>
         </div>
@@ -181,6 +182,62 @@
       </article>
 
     </div><!-- /gridVrxr -->
+
+    <!-- ── Product & Interface Design ── -->
+    <div class="work-category" id="cat-product">
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">Product & Interface Design</h3>
+    </div>
+    <div class="project-grid" id="gridProduct">
+
+      <!-- S-SHO Fashion MBTI -->
+      <article class="project-card" data-category="product">
+        <a href="projects/s-sho/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <div class="card-img-bg s-sho-gradient"></div>
+            <img src="projects/s-sho/images/s-sho_Main.jpg" alt="S-SHO Fashion MBTI Test" class="card-img" style="object-position: center 30%;">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat">Product Design &nbsp;·&nbsp; Mobile UI &nbsp;·&nbsp; Viral Experience</span>
+            </div>
+            <h3 class="card-title">S-SHO Fashion MBTI Test</h3>
+            <p class="card-desc">A mobile-first fashion personality test designed as a lightweight viral marketing experience. I created high-fidelity interface screens, visual assets, and a playful mobile flow optimized for quick engagement.</p>
+            <div class="card-tags">
+              <span class="tag">Product Design</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Visual Design</span>
+            </div>
+            <span class="card-cta">View Project →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- ViewDeFi -->
+      <article class="project-card" data-category="product">
+        <a href="projects/hackaton/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <div class="card-img-bg viewdefi-gradient"></div>
+            <img src="projects/hackaton/images/Hackathon_Main.jpg" alt="ViewDeFi — Hackathon Winner" class="card-img">
+            <span class="card-badge badge-gold">1st Place</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat">Product Design &nbsp;·&nbsp; Hackathon &nbsp;·&nbsp; Mobile Prototype</span>
+            </div>
+            <h3 class="card-title">ViewDeFi</h3>
+            <p class="card-desc">A hackathon-winning mobile product concept for blockchain-based real estate asset management. I translated a complex data-heavy concept into clear mobile dashboard, detail, and claim/request flows under a rapid sprint timeline.</p>
+            <div class="card-tags">
+              <span class="tag">1st Place</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Product Prototype</span>
+            </div>
+            <span class="card-cta">View Project →</span>
+          </div>
+        </a>
+      </article>
+
+    </div><!-- /gridProduct -->
 
     <!-- ── Experiments & Exploration ── -->
     <div class="work-category work-category-sub" id="cat-experiments">
@@ -592,6 +649,8 @@
     const catVrxr = document.getElementById('cat-vrxr');
     const catArt = document.getElementById('cat-3dart');
     const catTechart = document.getElementById('cat-techart');
+    const catProduct = document.getElementById('cat-product');
+    const gridProduct = document.getElementById('gridProduct');
     const catExperiments = document.getElementById('cat-experiments');
     const gridExperiments = document.getElementById('gridExperiments');
     const grid3dartRow2 = document.getElementById('grid3dart-row2');
@@ -615,6 +674,8 @@
           catVrxr.classList.remove('hidden');
           catArt.classList.remove('hidden');
           catTechart.classList.remove('hidden');
+          catProduct.classList.remove('hidden');
+          gridProduct.classList.remove('hidden');
           catExperiments.classList.remove('hidden');
           gridExperiments.classList.remove('hidden');
           grid3dartRow2.classList.remove('hidden');
@@ -622,13 +683,26 @@
           catVrxr.classList.remove('hidden');
           catArt.classList.add('hidden');
           catTechart.classList.add('hidden');
+          catProduct.classList.add('hidden');
+          gridProduct.classList.add('hidden');
           catExperiments.classList.remove('hidden');
           gridExperiments.classList.remove('hidden');
+          grid3dartRow2.classList.add('hidden');
+        } else if (filter === 'product') {
+          catVrxr.classList.add('hidden');
+          catArt.classList.add('hidden');
+          catTechart.classList.add('hidden');
+          catProduct.classList.remove('hidden');
+          gridProduct.classList.remove('hidden');
+          catExperiments.classList.add('hidden');
+          gridExperiments.classList.add('hidden');
           grid3dartRow2.classList.add('hidden');
         } else if (filter === '3dart') {
           catVrxr.classList.add('hidden');
           catArt.classList.remove('hidden');
           catTechart.classList.add('hidden');
+          catProduct.classList.add('hidden');
+          gridProduct.classList.add('hidden');
           catExperiments.classList.add('hidden');
           gridExperiments.classList.add('hidden');
           grid3dartRow2.classList.remove('hidden');
@@ -636,6 +710,8 @@
           catVrxr.classList.add('hidden');
           catArt.classList.add('hidden');
           catTechart.classList.remove('hidden');
+          catProduct.classList.add('hidden');
+          gridProduct.classList.add('hidden');
           catExperiments.classList.add('hidden');
           gridExperiments.classList.add('hidden');
           grid3dartRow2.classList.add('hidden');
