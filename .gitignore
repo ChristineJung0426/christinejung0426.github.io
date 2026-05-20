@@ -5,3 +5,10 @@ VR:XR/
 *.rtf
 # Large hover GIF replaced by MP4
 projects/flow/images/FlowTrailer_1.gif
+
+# Chef AR — large source assets (page uses YouTube embed + compressed thumbnail)
+projects/ChefAR/images/Chef_AR_prototype_Final.gif
+projects/ChefAR/images/Chef_AR_prototype_Final.mp4
+projects/ChefAR/images/Chef_AR_prototype_short_ORIGINAL.gif
+projects/ChefAR/images/Chef_AR_prototype_short2.gif
+projects/ChefAR/images/Wireframe2.png

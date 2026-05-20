@@ -484,6 +484,51 @@
   font-style: italic;
 }
 
+/* ── Spec Table (interaction model, etc.) ── */
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.92rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.case-table thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.95rem 1.1rem;
+  background: var(--surface-hi);
+  border-bottom: 1px solid var(--border);
+}
+
+.case-table tbody td {
+  padding: 0.95rem 1.1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.case-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.case-table tbody td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+.case-table tbody td:nth-child(2) {
+  width: 30%;
+}
+
 /* ── Tags row ── */
 .tag-row {
   display: flex;

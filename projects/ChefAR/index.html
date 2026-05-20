@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95G5SBTHBJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95G5SBTHBJ');
+</script>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=1400" />
+  <title>Chef AR — Christine Jung</title>
+  <meta name="description" content="A controller-free AR recipe assistant for smart glasses — a WIP spatial UX prototype exploring glanceable cooking guidance and pinch-based interaction. Designed for AR glasses, prototyped in Meta Quest 3 mixed reality." />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#work" class="back-link">All Work</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../about.html">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Spatial UX &nbsp;·&nbsp; AR Prototype</p>
+      <h1 class="project-title">Chef AR — Hands-Free AR Recipe Assistant</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Device</span>
+          <span class="meta-value">Designed for AR glasses, prototyped in Meta Quest 3 mixed reality</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">AR/VR Prototyper · UX Designer · Unity Prototype Designer (Solo)</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Unity, Figma, FigJam, AI-Assisted Development</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">Work in progress</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-content">
+
+    <div class="project-about">
+      <span class="project-about-label">About</span>
+      <div class="project-about-body">
+        <h2>WIP Spatial UX Prototype</h2>
+        <p>Chef AR explores how smart glasses could support cooking through glanceable recipe instructions, simple gesture input, and a mobile companion app for recipe discovery and organization.</p>
+        <div class="tag-row">
+          <span class="tag">AR Prototype</span>
+          <span class="tag">Spatial UX</span>
+          <span class="tag">Gesture Interaction</span>
+          <span class="tag">Unity</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== AR Prototype (YouTube) ===== -->
+    <section class="case-section">
+      <h2>AR Prototype</h2>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/LT-1s0Xj9mg" title="Chef AR Prototype" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="caption-standalone">Chef AR — full prototype walkthrough</p>
+    </section>
+
+    <!-- ===== Problem / Solution ===== -->
+    <section class="case-section">
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Cooking creates a real interaction constraint: users' hands are often wet, oily, dirty, or occupied. However, when following recipes, users frequently need to touch their phones to check ingredients, scroll through instructions, or move between steps.</p>
+        <p style="margin-top: 0.75rem;">This creates unnecessary interruptions during cooking and adds cognitive load at the exact moment users need to focus on the physical task.</p>
+      </div>
+
+      <div class="callout callout-solution">
+        <div class="callout-label">The Solution</div>
+        <p>Chef AR is a controller-free AR recipe assistant that lets users follow step-by-step cooking instructions through a lightweight spatial interface.</p>
+        <p style="margin-top: 0.75rem;">The mobile app helps users browse, save, and organize recipes before cooking. When they are ready to begin, they can launch AR Mode and view the recipe through smart glasses, using simple pinch-based interactions.</p>
+      </div>
+    </section>
+
+    <!-- ===== Design Goal ===== -->
+    <section class="case-section">
+      <h2>Design Goal</h2>
+      <p>Create a cooking assistant that allows users to:</p>
+      <ul>
+        <li>follow recipe steps without touching their phone</li>
+        <li>quickly glance at ingredients and instructions</li>
+        <li>reduce visual clutter while cooking</li>
+        <li>use simple, reliable gestures instead of complex interactions</li>
+        <li>stay focused on the physical cooking task</li>
+      </ul>
+    </section>
+
+    <!-- ===== System Flow ===== -->
+    <section class="case-section">
+      <h2>System Flow</h2>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Chef_AR_Flowchart.png" alt="Chef AR system flow — mobile recipe browsing to AR cooking mode">
+          <figcaption>I mapped the full experience from recipe discovery to AR cooking mode to clarify where the mobile app ends and where the controller-free AR interaction begins.</figcaption>
+        </figure>
+      </div>
+      <p>The mobile app supports browsing, saving, and preparing recipes. The AR mode is activated only when the user begins cooking, keeping the spatial interface focused on step-by-step guidance.</p>
+    </section>
+
+    <!-- ===== Mobile Companion Flow ===== -->
+    <section class="case-section">
+      <h2>Mobile Companion Flow — Wireframe</h2>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Wireframe.png" alt="Chef AR mobile companion wireframes">
+          <figcaption>Low-fidelity mobile wireframes for browsing recipes, reviewing ingredients, saving collections, and launching AR Mode.</figcaption>
+        </figure>
+      </div>
+      <p>I kept the mobile companion app intentionally low-fidelity at this stage because the main design challenge was not visual polish, but the relationship between mobile preparation and controller-free AR guidance.</p>
+      <p>The mobile flow supports recipe discovery and organization, while the AR interface focuses only on what users need during cooking: current step, ingredients, navigation, and visibility control.</p>
+    </section>
+
+    <!-- ===== Gesture Interaction Model ===== -->
+    <section class="case-section">
+      <h2>Gesture Interaction Model</h2>
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>Gesture</th>
+            <th>Function</th>
+            <th>Design Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pinch on arrows</td>
+            <td>Move to next / previous recipe step</td>
+            <td>Uses visible controls to make navigation explicit and reduce gesture ambiguity</td>
+          </tr>
+          <tr>
+            <td>Pinch on X</td>
+            <td>Close the recipe panel for better visibility</td>
+            <td>Lets users temporarily clear the field of view while cooking</td>
+          </tr>
+          <tr>
+            <td>Pinch on closed bubble</td>
+            <td>Reopen the recipe panel</td>
+            <td>Keeps the recipe accessible without permanently occupying the view</td>
+          </tr>
+          <tr>
+            <td>Pinch-drag on ingredient panel</td>
+            <td>Scroll through ingredients</td>
+            <td>Allows secondary information to stay available without overwhelming the main step</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>To keep the interaction model consistent, I used pinch-based input as the primary gesture across the prototype. Instead of relying on abstract gestures, users interact with visible controls, making the available actions easier to discover and more reliable to perform.</p>
+    </section>
+
+    <!-- ===== Key Iteration 1 ===== -->
+    <section class="case-section">
+      <h2>Key Iteration 1 — Swipe Navigation to Pinch Select</h2>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/Chef_AR_Swipe.gif" alt="Chef AR — early swipe navigation exploration">
+          <figcaption>Early swipe-based navigation exploration, later replaced by pinch-select on visible arrow controls.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Early Direction</h3>
+      <p>I initially explored swipe-based navigation for moving forward and backward through recipe steps.</p>
+
+      <h3>Issue</h3>
+      <p>In AR, swipe direction was not always intuitive. Forward and backward gestures could feel ambiguous, and input accuracy became unreliable depending on hand position and tracking.</p>
+
+      <h3>Iteration</h3>
+      <p>I changed the main navigation to pinch-to-select on visible arrow controls. This made the available actions more explicit, reduced gesture ambiguity, and created a more reliable interaction model for controller-free AR use.</p>
+
+      <h3>Result</h3>
+      <p>The interaction became simpler and easier to understand: users no longer needed to remember abstract directional gestures and could instead select visible controls directly.</p>
+    </section>
+
+    <!-- ===== Key Iteration 2 ===== -->
+    <section class="case-section">
+      <h2>Key Iteration 2 — Improving Target Visibility</h2>
+      <div class="gallery gallery-2">
+        <figure class="gallery-item">
+          <img src="images/TargetIndicator_Before.png" alt="Before — pointer ray with no target indicator">
+          <figcaption>Before — the pointer ray against the white recipe panel without a target indicator.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/TargetIndicator_After.png" alt="After — high-contrast blue target indicator">
+          <figcaption>After — a high-contrast blue indicator made aiming clarity reliable.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Early Issue</h3>
+      <p>The initial prototype made it difficult to understand exactly where the user was aiming. Because the target indicator and UI elements were both light-colored, the cursor often disappeared against the white recipe panel.</p>
+
+      <h3>Iteration</h3>
+      <p>I added a more visible blue target indicator to improve aiming clarity. This made it easier to understand which icon or UI element was currently being targeted before performing a pinch selection.</p>
+
+      <h3>Result</h3>
+      <p>The prototype became easier to control because the user could more clearly see the relationship between their hand input, the target indicator, and the selected UI element.</p>
+    </section>
+
+    <!-- ===== Prototype Implementation ===== -->
+    <section class="case-section">
+      <h2>Prototype Implementation</h2>
+      <p>The prototype was built in Unity using world-space UI cards, TextMeshPro, recipe step data, and input-driven navigation. I used AI-assisted development as a rapid prototyping partner while owning the interaction model, user flow, Unity scene setup, and design decisions.</p>
+      <p>This allowed me to quickly move from concept to a working prototype and focus on testing the core AR interaction questions: visibility, gesture clarity, step navigation, and information hierarchy.</p>
+    </section>
+
+    <!-- ===== Next Steps ===== -->
+    <section class="case-section">
+      <h2>Next Steps</h2>
+      <p>Next, I plan to test the prototype with users while they follow a simple recipe task. I will focus on:</p>
+      <ul>
+        <li>text readability at different distances</li>
+        <li>recipe panel placement and field-of-view comfort</li>
+        <li>ingredient panel scrolling</li>
+        <li>gesture discoverability</li>
+        <li>target indicator visibility</li>
+        <li>whether users can complete cooking steps without returning to their phone</li>
+      </ul>
+      <p>Future iterations will refine the visual design, add stronger gesture feedback, and test how much recipe information should remain visible during active cooking.</p>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-logo">Christine Jung</p>
+        <p class="footer-sub">AR/VR Prototyper & 3D Artist</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:christineart426@gmail.com">christineart426@gmail.com</a>
+        <a href="https://www.linkedin.com/in/christinejung426/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Christine Jung</p>
+  </footer>
+
+  <script>
+    const projectNav = document.getElementById('projectNav');
+    if (projectNav) {
+      window.addEventListener('scroll', () => {
+        projectNav.classList.toggle('scrolled', window.scrollY > 20);
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
