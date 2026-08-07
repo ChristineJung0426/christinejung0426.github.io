@@ -34,7 +34,7 @@
   <header style="padding-top: var(--nav-h);">
     <div class="project-hero">
       <p class="project-eyebrow">VR / XR &nbsp;·&nbsp; Spatial UX &nbsp;·&nbsp; AR Prototype</p>
-      <h1 class="project-title">Chef AR — Hands-Free AR Recipe Assistant</h1>
+      <h1 class="project-title">Chef AR — Controller-Free AR Recipe Assistant</h1>
       <div class="project-meta-grid">
         <div class="project-meta-item">
           <span class="meta-label">Device</span>
@@ -50,7 +50,7 @@
         </div>
         <div class="project-meta-item">
           <span class="meta-label">Status</span>
-          <span class="meta-value">Work in progress</span>
+          <span class="meta-value">High-fidelity design pass · Work in progress</span>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
       <span class="project-about-label">About</span>
       <div class="project-about-body">
         <h2>WIP Spatial UX Prototype</h2>
-        <p>Chef AR explores how smart glasses could support cooking through glanceable recipe instructions, simple gesture input, and a mobile companion app for recipe discovery and organization.</p>
+        <p>Chef AR explores how smart glasses could support cooking through glanceable recipe instructions, simple gesture input, and a mobile companion app for recipe discovery and organization. After validating the core interaction model with a low-fidelity Unity prototype, I developed a high-fidelity design pass across both the AR interface and the mobile companion app.</p>
         <div class="tag-row">
           <span class="tag">AR Prototype</span>
           <span class="tag">Spatial UX</span>
@@ -133,6 +133,18 @@
       </div>
       <p>I kept the mobile companion app intentionally low-fidelity at this stage because the main design challenge was not visual polish, but the relationship between mobile preparation and controller-free AR guidance.</p>
       <p>The mobile flow supports recipe discovery and organization, while the AR interface focuses only on what users need during cooking: current step, ingredients, navigation, and visibility control.</p>
+    </section>
+
+    <!-- ===== High-Fidelity Mobile Companion ===== -->
+    <section class="case-section">
+      <h2>Mobile Companion — High-Fidelity Design</h2>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <video src="images/Chef_AR_Mobile_high_web.mp4" autoplay loop muted playsinline></video>
+          <figcaption>High-fidelity mobile mockup — browsing a recipe, reviewing ingredients, and launching AR Mode.</figcaption>
+        </figure>
+      </div>
+      <p>Building on the wireframes, I designed a high-fidelity pass of the mobile companion app in Figma. The visual direction keeps the recipe content front and center, with warm food photography, clear step hierarchy, and a single prominent action to launch AR Mode when the user is ready to cook.</p>
     </section>
 
     <!-- ===== Gesture Interaction Model ===== -->
@@ -219,26 +231,45 @@
       <p>The prototype became easier to control because the user could more clearly see the relationship between their hand input, the target indicator, and the selected UI element.</p>
     </section>
 
+    <!-- ===== High-Fidelity AR Interface ===== -->
+    <section class="case-section">
+      <h2>AR Interface — High-Fidelity Design</h2>
+      <div class="carousel carousel-plain" data-carousel>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <figure class="carousel-slide active">
+            <img src="images/High_AR_Step1.jpg" alt="Chef AR high-fidelity AR interface — Step 1, Prepare Filling">
+            <figcaption>Step 1 — the recipe panel opens with ingredients on the left and the current step on the right.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/High_AR_Step2.jpg" alt="Chef AR high-fidelity AR interface — Step 2, Freeze Filling">
+            <figcaption>Step 2 — pinching the arrows advances the step while the ingredient list stays in place.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/High_AR_Step7.jpg" alt="Chef AR high-fidelity AR interface — Step 7, Enjoy">
+            <figcaption>Step 7 — the final step, with progress dots showing how far along the recipe the user is.</figcaption>
+          </figure>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next">&rsaquo;</button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="case-split">
+        <figure class="gallery-item">
+          <video src="images/Chef_AR_ARHigh_web.mp4" autoplay loop muted playsinline></video>
+          <figcaption>The high-fidelity AR interface running in Meta Quest 3 mixed reality.</figcaption>
+        </figure>
+        <div class="case-split-body">
+          <p>Taking what I learned from the low-fidelity iterations, I designed the high-fidelity AR interface in Figma and brought it back into the Unity prototype. The visual pass keeps the two-zone layout — ingredients on the left, current step on the right — while refining typography, contrast against real-world backgrounds, and the visibility states of the recipe panel.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Prototype Implementation ===== -->
     <section class="case-section">
       <h2>Prototype Implementation</h2>
       <p>The prototype was built in Unity using world-space UI cards, TextMeshPro, recipe step data, and input-driven navigation. I used AI-assisted development as a rapid prototyping partner while owning the interaction model, user flow, Unity scene setup, and design decisions.</p>
       <p>This allowed me to quickly move from concept to a working prototype and focus on testing the core AR interaction questions: visibility, gesture clarity, step navigation, and information hierarchy.</p>
-    </section>
-
-    <!-- ===== Next Steps ===== -->
-    <section class="case-section">
-      <h2>Next Steps</h2>
-      <p>Next, I plan to test the prototype with users while they follow a simple recipe task. I will focus on:</p>
-      <ul>
-        <li>text readability at different distances</li>
-        <li>recipe panel placement and field-of-view comfort</li>
-        <li>ingredient panel scrolling</li>
-        <li>gesture discoverability</li>
-        <li>target indicator visibility</li>
-        <li>whether users can complete cooking steps without returning to their phone</li>
-      </ul>
-      <p>Future iterations will refine the visual design, add stronger gesture feedback, and test how much recipe information should remain visible during active cooking.</p>
     </section>
 
   </main>
@@ -258,6 +289,8 @@
     <p class="footer-copy">© 2026 Christine Jung</p>
   </footer>
 
+  <script src="../../js/lightbox.js"></script>
+  <script src="../../js/carousel.js"></script>
   <script>
     const projectNav = document.getElementById('projectNav');
     if (projectNav) {

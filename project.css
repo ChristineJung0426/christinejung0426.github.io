@@ -383,6 +383,42 @@
 }
 
 /* Caption — no background box, just clean text beneath */
+/* Media beside body copy — keeps the clip secondary to the text */
+.case-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.case-split-body p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 860px) {
+  .case-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+/* Video items aren't lightbox-able — drop the zoom affordance */
+.gallery-item:has(video) {
+  cursor: default;
+}
+
+.gallery-item:has(video)::after {
+  display: none;
+}
+
 .gallery-item figcaption {
   padding: 0.6rem 0.25rem;
   font-size: 0.82rem;
@@ -722,6 +758,16 @@
   display: block;
   background: #4a4a4a;
   border-radius: var(--radius);
+}
+
+/* Slides that already sit on their own backdrop — no letterbox fill needed */
+.carousel-plain .carousel-track {
+  background: none;
+}
+
+.carousel-plain .carousel-slide img {
+  height: auto;
+  background: none;
 }
 
 .carousel-slide figcaption {

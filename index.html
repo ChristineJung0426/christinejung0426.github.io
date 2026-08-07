@@ -195,7 +195,7 @@
         <a href="projects/ChefAR/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg chef-ar-gradient"></div>
-            <img src="projects/ChefAR/images/Chef_AR_prototype_short.gif" alt="Chef AR — Controller-Free AR Recipe Assistant" class="card-img">
+            <video src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" class="card-img" autoplay loop muted playsinline></video>
             <span class="card-badge badge-grey">WIP</span>
           </div>
           <div class="card-body">
@@ -203,7 +203,7 @@
               <span class="card-cat">VR / XR &nbsp;·&nbsp; Spatial UX &nbsp;·&nbsp; AR Prototype</span>
             </div>
             <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
-            <p class="card-desc">A low-fidelity AR prototype exploring touch-free recipe navigation for smart glasses. I tested pinch-based step controls, ingredient scrolling, panel visibility, and target feedback to reduce phone interaction while cooking.</p>
+            <p class="card-desc">An AR prototype exploring touch-free recipe navigation for smart glasses. I tested pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — now refined into a high-fidelity AR interface with a mobile companion design.</p>
             <div class="card-tags">
               <span class="tag">AR Prototype</span>
               <span class="tag">Spatial UX</span>
@@ -274,6 +274,76 @@
       </article>
 
     </div><!-- /gridProduct -->
+
+    <!-- ── Product filter only: AR Interaction Prototype (reuses main title) ── -->
+    <div class="work-category card-product-only">
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">AR Interaction Prototype</h3>
+    </div>
+    <div class="project-grid project-grid-1col card-product-only">
+      <!-- Chef AR -->
+      <article class="project-card project-card-feature" data-category="product">
+        <a href="projects/ChefAR/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <div class="card-img-bg chef-ar-gradient"></div>
+            <img src="projects/ChefAR/images/Chef_AR_Thumbnail.jpg" alt="Chef AR — Controller-Free AR Recipe Assistant" class="card-img" loading="lazy">
+            <div class="card-hover-overlay"></div>
+            <video src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" muted loop playsinline preload="none" class="card-img-hover"></video>
+            <span class="card-badge badge-grey">WIP</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat">Spatial UX &nbsp;·&nbsp; AR Prototype &nbsp;·&nbsp; Gesture Interaction</span>
+            </div>
+            <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
+            <p class="card-desc">An AR product concept spanning a high-fidelity mobile companion app and a controller-free AR cooking interface. I designed pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — with product decisions around information hierarchy and cognitive load during real-world tasks.</p>
+            <div class="card-tags">
+              <span class="tag">Product Design</span>
+              <span class="tag">Spatial UX</span>
+              <span class="tag">AR Prototype</span>
+              <span class="tag">Unity</span>
+              <span class="tag">Figma</span>
+              <span class="tag">WIP</span>
+            </div>
+            <span class="card-cta">View Case Study →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <!-- ── Product filter only: VR / XR — Immersive Experience & Prototyping (reuses main title) ── -->
+    <div class="work-category card-product-only">
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">VR / XR — Immersive Experience & Prototyping</h3>
+    </div>
+    <div class="project-grid project-grid-1col card-product-only">
+      <!-- Flow -->
+      <article class="project-card project-card-feature" data-category="product">
+        <a href="projects/flow/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <div class="card-img-bg flow-gradient"></div>
+            <img src="projects/flow/images/flow_cover.webp" alt="Flow — Interactive Immersive Experience" class="card-img">
+            <div class="card-hover-overlay"></div>
+            <video src="projects/flow/images/FlowTrailer_1.mp4" muted loop playsinline class="card-img-hover" preload="none"></video>
+            <span class="card-badge badge-gold">Award Winning</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat">Interactive Experience &nbsp;·&nbsp; Immersive UX &nbsp;·&nbsp; Body Tracking</span>
+            </div>
+            <h3 class="card-title">Flow — Interactive Immersive Experience</h3>
+            <p class="card-desc">An award-winning immersive experience combining interaction design, body-tracking UX, and a large-format spatial interface. I shaped the interaction model and visual system across a 270° curved screen — from user flows to on-screen feedback.</p>
+            <div class="card-tags">
+              <span class="tag">Interaction Design</span>
+              <span class="tag">UX System</span>
+              <span class="tag">Body Tracking</span>
+              <span class="tag">Unreal Engine 5</span>
+            </div>
+            <span class="card-cta">View Case Study →</span>
+          </div>
+        </a>
+      </article>
+    </div>
 
     <!-- ── Experiments & Exploration ── -->
     <div class="work-category work-category-sub" id="cat-experiments">
@@ -693,88 +763,122 @@
     const gridExperiments = document.getElementById('gridExperiments');
     const grid3dartRow2 = document.getElementById('grid3dart-row2');
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
+    const VALID_FILTERS = ['all', 'vrxr', 'product', '3dart', 'techart'];
 
-        allCards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        });
+    function applyFilter(filter) {
+      if (!VALID_FILTERS.includes(filter)) filter = 'all';
 
-        // Show/hide category headers
-        if (filter === 'all') {
-          catVrxr.classList.remove('hidden');
-          catArt.classList.remove('hidden');
-          catTechart.classList.remove('hidden');
-          catProduct.classList.remove('hidden');
-          gridProduct.classList.remove('hidden');
-          catArProto.classList.remove('hidden');
-          gridArProto.classList.remove('hidden');
-          catExperiments.classList.remove('hidden');
-          gridExperiments.classList.remove('hidden');
-          grid3dartRow2.classList.remove('hidden');
-        } else if (filter === 'vrxr') {
-          catVrxr.classList.remove('hidden');
-          catArt.classList.add('hidden');
-          catTechart.classList.add('hidden');
-          catProduct.classList.add('hidden');
-          gridProduct.classList.add('hidden');
-          catArProto.classList.remove('hidden');
-          gridArProto.classList.remove('hidden');
-          catExperiments.classList.remove('hidden');
-          gridExperiments.classList.remove('hidden');
-          grid3dartRow2.classList.add('hidden');
-        } else if (filter === 'product') {
-          catVrxr.classList.add('hidden');
-          catArt.classList.add('hidden');
-          catTechart.classList.add('hidden');
-          catProduct.classList.remove('hidden');
-          gridProduct.classList.remove('hidden');
-          catArProto.classList.add('hidden');
-          gridArProto.classList.add('hidden');
-          catExperiments.classList.add('hidden');
-          gridExperiments.classList.add('hidden');
-          grid3dartRow2.classList.add('hidden');
-        } else if (filter === '3dart') {
-          catVrxr.classList.add('hidden');
-          catArt.classList.remove('hidden');
-          catTechart.classList.add('hidden');
-          catProduct.classList.add('hidden');
-          gridProduct.classList.add('hidden');
-          catArProto.classList.add('hidden');
-          gridArProto.classList.add('hidden');
-          catExperiments.classList.add('hidden');
-          gridExperiments.classList.add('hidden');
-          grid3dartRow2.classList.remove('hidden');
-        } else if (filter === 'techart') {
-          catVrxr.classList.add('hidden');
-          catArt.classList.add('hidden');
-          catTechart.classList.remove('hidden');
-          catProduct.classList.add('hidden');
-          gridProduct.classList.add('hidden');
-          catArProto.classList.add('hidden');
-          gridArProto.classList.add('hidden');
-          catExperiments.classList.add('hidden');
-          gridExperiments.classList.add('hidden');
-          grid3dartRow2.classList.add('hidden');
+      filterBtns.forEach(b => {
+        b.classList.toggle('active', b.dataset.filter === filter);
+      });
+
+      document.body.dataset.filter = filter;
+
+      allCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
         }
+      });
 
-        // Stagger visible cards in
-        let delay = 0;
-        allCards.forEach(card => {
-          if (!card.classList.contains('hidden')) {
-            card.style.transitionDelay = delay + 'ms';
-            delay += 60;
-          }
-        });
+      // Show/hide category headers
+      if (filter === 'all') {
+        catVrxr.classList.remove('hidden');
+        catArt.classList.remove('hidden');
+        catTechart.classList.remove('hidden');
+        catProduct.classList.remove('hidden');
+        gridProduct.classList.remove('hidden');
+        catArProto.classList.remove('hidden');
+        gridArProto.classList.remove('hidden');
+        catExperiments.classList.remove('hidden');
+        gridExperiments.classList.remove('hidden');
+        grid3dartRow2.classList.remove('hidden');
+      } else if (filter === 'vrxr') {
+        catVrxr.classList.remove('hidden');
+        catArt.classList.add('hidden');
+        catTechart.classList.add('hidden');
+        catProduct.classList.add('hidden');
+        gridProduct.classList.add('hidden');
+        catArProto.classList.remove('hidden');
+        gridArProto.classList.remove('hidden');
+        catExperiments.classList.remove('hidden');
+        gridExperiments.classList.remove('hidden');
+        grid3dartRow2.classList.add('hidden');
+      } else if (filter === 'product') {
+        catVrxr.classList.add('hidden');
+        catArt.classList.add('hidden');
+        catTechart.classList.add('hidden');
+        catProduct.classList.remove('hidden');
+        gridProduct.classList.remove('hidden');
+        catArProto.classList.add('hidden');
+        gridArProto.classList.add('hidden');
+        catExperiments.classList.add('hidden');
+        gridExperiments.classList.add('hidden');
+        grid3dartRow2.classList.add('hidden');
+      } else if (filter === '3dart') {
+        catVrxr.classList.add('hidden');
+        catArt.classList.remove('hidden');
+        catTechart.classList.add('hidden');
+        catProduct.classList.add('hidden');
+        gridProduct.classList.add('hidden');
+        catArProto.classList.add('hidden');
+        gridArProto.classList.add('hidden');
+        catExperiments.classList.add('hidden');
+        gridExperiments.classList.add('hidden');
+        grid3dartRow2.classList.remove('hidden');
+      } else if (filter === 'techart') {
+        catVrxr.classList.add('hidden');
+        catArt.classList.add('hidden');
+        catTechart.classList.remove('hidden');
+        catProduct.classList.add('hidden');
+        gridProduct.classList.add('hidden');
+        catArProto.classList.add('hidden');
+        gridArProto.classList.add('hidden');
+        catExperiments.classList.add('hidden');
+        gridExperiments.classList.add('hidden');
+        grid3dartRow2.classList.add('hidden');
+      }
+
+      // Stagger visible cards in
+      let delay = 0;
+      allCards.forEach(card => {
+        if (!card.classList.contains('hidden')) {
+          card.style.transitionDelay = delay + 'ms';
+          delay += 60;
+        }
+      });
+    }
+
+    // ── Parse URL hash: #work → All, #work-<filter> → specific ──
+    function filterFromHash() {
+      const h = window.location.hash.replace(/^#/, '');
+      if (!h || h === 'work') return 'all';
+      const m = h.match(/^work-(.+)$/);
+      if (m && VALID_FILTERS.includes(m[1])) return m[1];
+      return null; // hash unrelated to work section
+    }
+
+    // Wire up click → apply + update URL
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const filter = btn.dataset.filter;
+        applyFilter(filter);
+        const newHash = filter === 'all' ? 'work' : 'work-' + filter;
+        // Update hash without triggering scroll jump
+        history.replaceState(null, '', '#' + newHash);
       });
     });
+
+    // Apply filter from hash on load + when hash changes
+    window.addEventListener('hashchange', () => {
+      const f = filterFromHash();
+      if (f !== null) applyFilter(f);
+    });
+
+    // Initial load: honor hash filter (defaults to 'all')
+    const initialFilter = filterFromHash();
+    if (initialFilter !== null) applyFilter(initialFilter);
 
     // ── Scroll fade-in ──
     const observer = new IntersectionObserver(entries => {

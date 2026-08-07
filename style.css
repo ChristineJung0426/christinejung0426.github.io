@@ -690,6 +690,19 @@ button {
   }
 }
 
+/* Product-filter-only elements — hidden by default, revealed when Product filter active */
+.card-product-only {
+  display: none;
+}
+
+body[data-filter="product"] .work-category.card-product-only {
+  display: block;
+}
+
+body[data-filter="product"] .project-grid.card-product-only {
+  display: grid;
+}
+
 /* Card link wrapper */
 .card-link {
   display: flex;
