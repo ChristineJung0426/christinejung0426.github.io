@@ -865,12 +865,14 @@
       });
     }
 
-    // ── Parse URL hash: #work → All, #work-<filter> → specific ──
+    // Short public URLs; keep existing shared links working.
+    const FILTER_HASHES = { all: 'work', vrxr: 'vrxr', product: 'product', '3dart': '3d', techart: 'techart' };
     function filterFromHash() {
       const h = window.location.hash.replace(/^#/, '');
       if (!h || h === 'work') return 'all';
-      const m = h.match(/^work-(.+)$/);
-      if (m && VALID_FILTERS.includes(m[1])) return m[1];
+      const alias = h.replace(/^work-/, '');
+      const filter = alias === '3d' ? '3dart' : alias;
+      if (VALID_FILTERS.includes(filter)) return filter;
       return null; // hash unrelated to work section
     }
 
@@ -879,7 +881,7 @@
       btn.addEventListener('click', (e) => {
         const filter = btn.dataset.filter;
         applyFilter(filter);
-        const newHash = filter === 'all' ? 'work' : 'work-' + filter;
+        const newHash = FILTER_HASHES[filter];
         // Update hash without triggering scroll jump
         history.replaceState(null, '', '#' + newHash);
       });
@@ -888,12 +890,18 @@
     // Apply filter from hash on load + when hash changes
     window.addEventListener('hashchange', () => {
       const f = filterFromHash();
-      if (f !== null) applyFilter(f);
+      if (f !== null) {
+        applyFilter(f);
+        if (window.location.hash) history.replaceState(null, '', '#' + FILTER_HASHES[f]);
+      }
     });
 
     // Initial load: honor hash filter (defaults to 'all')
     const initialFilter = filterFromHash();
-    if (initialFilter !== null) applyFilter(initialFilter);
+    if (initialFilter !== null) {
+      applyFilter(initialFilter);
+      if (window.location.hash) history.replaceState(null, '', '#' + FILTER_HASHES[initialFilter]);
+    }
 
     // ── Scroll fade-in ──
     const observer = new IntersectionObserver(entries => {
