@@ -18,12 +18,13 @@
   <!-- Apercu Pro loaded via @font-face in style.css -->
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../project.css" />
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
 
   <nav class="project-nav" id="projectNav">
     <div class="project-nav-left">
-      <a href="../../index.html#work" class="back-link">All Work</a>
+      <a href="../../index.html#work-techart" class="back-link">Tech Art</a>
       <div class="nav-divider"></div>
       <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
     </div>
@@ -35,7 +36,7 @@
 
   <header style="padding-top: var(--nav-h);">
     <div class="project-hero">
-      <p class="project-eyebrow">3D Art &nbsp;·&nbsp; Environment Tech &amp; Shaders</p>
+      <p class="project-eyebrow">Tech Art &nbsp;·&nbsp; Procedural Systems &amp; Shaders</p>
       <h1 class="project-title">The Arctic Epoch</h1>
       <div class="project-meta-grid">
         <div class="project-meta-item">
@@ -51,91 +52,118 @@
   </header>
 
   <div class="project-cover arctic-gradient" style="max-width:100%; border-bottom:1px solid var(--border);">
-    <!-- Replace with: <img src="images/cover.jpg" alt="The Arctic Epoch"> -->
+    <img width="1743" height="784" src="../Snow/Images/merlion.png" alt="Snow and icicle systems applied to the Merlion in the team environment" style="width:100%;display:block;max-height:440px;object-fit:cover;">
   </div>
 
-  <main class="project-content">
-
+<main class="project-content">
     <div class="project-about">
-      <span class="project-about-label">About</span>
+      <span class="project-about-label">Overview</span>
       <div class="project-about-body">
-        <h2>Procedural snow and icicle systems inside a moody dystopian cityscape</h2>
-        <p>
-          The Arctic Epoch is an environment tech project focused on building procedural systems
-          for winter environments. A Houdini-based snow generator and icicle generator drive the
-          look of a dystopian frozen city, with custom shaders handling material response to snow
-          accumulation.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Unreal Engine 5</span>
-          <span class="tag">Houdini</span>
-          <span class="tag">Procedural Snow</span>
-          <span class="tag">Icicle Generator</span>
-          <span class="tag">Shader Development</span>
-        </div>
+        <h2>Building procedural winter systems for a frozen Singapore</h2>
+        <p>The Arctic Epoch is a 14-week group project set in a post-apocalyptic Singapore after a global snowstorm. This case study focuses on my snow and icicle generators, ice shader troubleshooting, and snowflake research.</p>
+        <p>I developed the piled snow system in <strong class="arctic-emphasis">Unreal Engine 5 Blueprint</strong> and the <strong class="arctic-emphasis">ice and icicle generator in Houdini</strong>. I also resolved rendering issues in a teammate's ice shader. The environment shown here is a collaborative team result.</p>
       </div>
     </div>
 
-    <section class="case-section">
-      <div class="section-num">Environment</div>
-      <h2>Final Renders</h2>
+    <nav class="arctic-toc" aria-label="Case study sections">
+      <a href="#snow">01 · Snow Generator</a>
+      <a href="#icicle">02 · Icicle Generator</a>
+      <a href="#ice-shader">03 · Ice Shader</a>
+      <a href="#snowflake">04 · Snowflake R&amp;D</a>
+    </nav>
+
+    <section class="case-section" id="snow">
+      <div class="section-num">01 / Unreal Engine 5 · Blueprint</div>
+      <h2>Piled Snow Generator</h2>
+      <p>Create snow with visible thickness that conforms to different objects, with controls for coverage and a windswept appearance.</p>
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/rGE1g-rqoIk" title="Snow thickness and texture blend demonstration" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <h3>Controlling the snow</h3>
+      <p>The Blueprint tool exposes <strong class="arctic-emphasis">snow coverage</strong>, sparse rate, sphere size, texture, displacement scale and strength, and mesh caching. These controls let me adapt the generated snow to different assets.</p>
+      <div class="callout">
+        <h3 class="callout-label">Problem — generating snow on large assets</h3>
+        <p>Large or high-poly models made generation too heavy. Changes to an object's transform or scale also required caching the mesh and generating the snow again.</p>
+      </div>
+      <div class="callout callout-solution">
+        <h3 class="callout-label">Solution — generate small, then bake</h3>
+        <p>I generated snow on objects scaled down to 0.02 to reduce the generation burden, then <strong>baked the output as a static mesh</strong> for use in the environment.</p>
+      </div>
       <div class="gallery gallery-1">
-        <figure class="gallery-item">
-          <!-- <img src="images/hero.jpg" alt="Arctic Epoch hero"> -->
-          <div class="img-placeholder" style="aspect-ratio:21/9;">Hero render — add image</div>
-        </figure>
+        <figure class="gallery-item"><img width="2770" height="1016" src="../Snow/Images/StackedSnow_pack.png" alt="Generated snow meshes applied across environment assets" loading="lazy"><figcaption>Baked snow output across the environment asset set</figcaption></figure>
       </div>
-      <div class="gallery gallery-2">
-        <figure class="gallery-item">
-          <!-- <img src="images/render-01.jpg" alt="City render"> -->
-          <div class="img-placeholder">City render — add image</div>
-        </figure>
-        <figure class="gallery-item">
-          <!-- <img src="images/render-02.jpg" alt="Snow detail"> -->
-          <div class="img-placeholder">Snow detail — add image</div>
-        </figure>
+      <h3>Blending snow into the surface</h3>
+      <p>Alongside the piled geometry, I created a snow texture blend material that could be incorporated into an object's parent material. Blend bias controls the snow amount, while blend sharpness controls the transition.</p>
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/3mMGChkBRZ4" title="Snow texture blend controls" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    </section>
+
+    <section class="case-section" id="icicle">
+      <div class="section-num">02 / Houdini</div>
+      <h2>Ice &amp; Icicle Generator</h2>
+      <p>I built a generator that grows ice and icicles in response to an input mesh. Controls include seed birth rate, growth speed and length, thickness, shape, and ice coverage.</p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item"><img width="800" height="436" src="../Icicle/Images/icicle_simulation_Thumnail.gif" alt="Ice and icicles growing along a Merlion mesh" loading="lazy"><figcaption>Simulated growth conforms to the input mesh</figcaption></figure>
+        <figure class="gallery-item"><img width="1773" height="697" src="../Icicle/Images/icicle.PNG" alt="Houdini icicle generator output and controls" loading="lazy"><figcaption>Ice and icicle generation in Houdini</figcaption></figure>
       </div>
+      <h3>From simulation to environment asset</h3>
+      <p>The tool supports animated growth, but the project used the <strong class="arctic-emphasis">final simulation frame</strong> as its output. The Merlion combines this icicle output with accumulated snow.</p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item"><img width="1743" height="784" src="../Snow/Images/merlion.png" alt="Merlion in the team environment with snow and icicles applied" loading="lazy"><figcaption>Combined snow and icicle application in the team's environment</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section" id="ice-shader">
+      <div class="section-num">03 / Unreal Engine 5 · Problem Solving</div>
+      <h2>Ice Shader — Rendering &amp; Flickering</h2>
+      <p>A teammate created the original ice shader. My contribution was to investigate and resolve the transparency and flickering issues that appeared when it was used in the snowstorm environment.</p>
+      <div class="callout">
+        <h3 class="callout-label">Problem — transparency during the snowstorm</h3>
+        <p>The shader used the scene behind the ice to create a translucent appearance. With the snowstorm's 2D sprites behind it, the ice appeared fully transparent instead of retaining its volume.</p>
+      </div>
+      <figure class="arctic-demo">
+        <div class="arctic-crop arctic-crop--transparent"><img width="800" height="436" src="../Iceshader_problemsolving/images/transparent_ice.gif" alt="Before: ice becomes overly transparent against the snowstorm" loading="lazy"></div>
+        <figcaption>Before — transparency breaks down against the snowstorm</figcaption>
+      </figure>
+      <div class="callout">
+        <h3 class="callout-label">Problem — distant objects flickering</h3>
+        <p>The ice also showed flickering on distant objects, including the Merlion.</p>
+      </div>
+      <figure class="arctic-demo">
+        <img width="800" height="436" src="../Iceshader_problemsolving/images/flickering.gif" alt="Before: flickering visible on distant ice-covered objects" loading="lazy">
+        <figcaption>Before — unstable appearance on distant ice</figcaption>
+      </figure>
+      <div class="callout callout-solution">
+        <h3 class="callout-label">Solution — opaque material with apparent depth</h3>
+        <p>I switched the shader to opaque and <strong>offset its UV coordinates using the camera vector</strong> to preserve a volumetric ice appearance. This avoided relying on the scene behind the ice for its translucent look.</p>
+      </div>
+      <figure class="arctic-demo">
+        <div class="arctic-crop arctic-crop--opaque"><img width="800" height="436" src="../Iceshader_problemsolving/images/opaque_ice2%20(1).gif" alt="After: opaque ice shader with camera-vector UV offsets" loading="lazy"></div>
+        <figcaption>After — opaque ice with a volumetric appearance</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section" id="snowflake">
+      <div class="section-num">04 / Houdini · R&amp;D</div>
+      <h2>Snowflake Generator</h2>
+      <p class="arctic-note">Exploratory work — not used in the final playable demo.</p>
+      <p>I developed a parametric snowflake generator for a planned cinematic introduction, referencing Clifford A. Reiter's <em>A local cellular model for snow crystal growth</em>. <strong class="arctic-emphasis">Alpha, Beta, and Gamma</strong> controls let me explore different growth patterns.</p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item"><img width="560" height="315" src="../Snowflake/Images/SnowFlakeGrowth_Thumbnail.gif" alt="Cellular snowflake growth simulation in Houdini" loading="lazy"><figcaption>Procedural snowflake growth study</figcaption></figure>
+        <figure class="gallery-item"><img width="1201" height="499" src="../Snowflake/Images/euihyunj_asst3_sshot1_lable.png" alt="Snowflake variations produced by Alpha, Beta, and Gamma parameters" loading="lazy"><figcaption>Exploring parameter-driven snowflake variations</figcaption></figure>
+      </div>
+      <p>When the team changed the deliverable from a cinematic to a playable demo, the snowflake introduction was no longer needed. It remains part of the project's research and development.</p>
     </section>
 
     <section class="case-section">
-      <div class="section-num">Procedural Systems</div>
-      <h2>Snow & Icicle Generators</h2>
-      <div class="gallery gallery-2">
-        <figure class="gallery-item">
-          <!-- <img src="images/snow-houdini.jpg" alt="Snow generator in Houdini"> -->
-          <div class="img-placeholder">Snow generator — Houdini — add image</div>
-          <figcaption>Procedural snow generator — Houdini network</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <!-- <img src="images/icicle-houdini.jpg" alt="Icicle generator in Houdini"> -->
-          <div class="img-placeholder">Icicle generator — Houdini — add image</div>
-          <figcaption>Icicle generator — Houdini network</figcaption>
-        </figure>
-      </div>
-      <div class="gallery gallery-3">
-        <figure class="gallery-item">
-          <!-- <img src="images/snow-close.jpg" alt="Snow close-up"> -->
-          <div class="img-placeholder">Snow close-up — add image</div>
-          <figcaption>Snow accumulation on surface</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <!-- <img src="images/icicle-close.jpg" alt="Icicle close-up"> -->
-          <div class="img-placeholder">Icicle close-up — add image</div>
-          <figcaption>Icicle formation detail</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <!-- <img src="images/shader.jpg" alt="Snow shader"> -->
-          <div class="img-placeholder">Snow shader — add image</div>
-          <figcaption>Custom snow accumulation shader</figcaption>
-        </figure>
-      </div>
+      <div class="section-num">Credits</div>
+      <h2>Team &amp; Contributions</h2>
+      <p>Christine Jung — Shader Technical Artist<br>Robin Zheng — Technical Artist, Look-Dev Artist<br>Caiyu Zhang — Technical Environment Artist<br>Yuxuan Wu — Environment Artist, Technical Artist<br>Laura Yang — Technical Artist, Look-Dev Artist</p>
+      <p>This case study focuses on my technical art contributions. Environment imagery shows the collaborative project.</p>
+      <p><a href="#snow">Back to the technical breakdown ↑ <span aria-hidden="true">↓</span></a></p>
     </section>
-
   </main>
 
   <div class="project-footer">
     <div class="project-footer-inner">
-      <a href="../../index.html#work" class="back-to-work">Back to All Work</a>
+      <a href="../../index.html#work-techart" class="back-to-work">Back to Tech Art</a>
       <p class="footer-copy-sm">© 2026 Christine Jung</p>
     </div>
   </div>
