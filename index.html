@@ -876,6 +876,19 @@
       return null; // hash unrelated to work section
     }
 
+    // Filter aliases are not element IDs, so explicitly land at Projects.
+    function scrollToFilteredWork() {
+      if (!window.location.hash || filterFromHash() === null) return;
+      requestAnimationFrame(() => {
+        const work = document.getElementById('work');
+        const navHeight = document.getElementById('navbar').getBoundingClientRect().height;
+        window.scrollTo({
+          top: Math.max(0, window.scrollY + work.getBoundingClientRect().top - navHeight),
+          behavior: 'instant'
+        });
+      });
+    }
+
     // Wire up click → apply + update URL
     filterBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -893,6 +906,7 @@
       if (f !== null) {
         applyFilter(f);
         if (window.location.hash) history.replaceState(null, '', '#' + FILTER_HASHES[f]);
+        scrollToFilteredWork();
       }
     });
 
@@ -901,7 +915,9 @@
     if (initialFilter !== null) {
       applyFilter(initialFilter);
       if (window.location.hash) history.replaceState(null, '', '#' + FILTER_HASHES[initialFilter]);
+      scrollToFilteredWork();
     }
+    window.addEventListener('load', scrollToFilteredWork, { once: true });
 
     // ── Scroll fade-in ──
     const observer = new IntersectionObserver(entries => {
