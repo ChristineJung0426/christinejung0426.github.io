@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="robots" content="noindex, noimageindex" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-95G5SBTHBJ"></script>
 <script>
@@ -445,7 +446,7 @@
     <!-- ── 3D Art ── -->
     <div class="work-category" id="cat-3dart">
       <span class="work-category-label">Category</span>
-      <h3 class="work-category-title">3D Art — Environment Art & Tech Art</h3>
+      <h3 class="work-category-title">3D Art</h3>
     </div>
     <!-- 3D Art — Row 1: Kitchen + Alleyway (2-col, larger) -->
     <div class="project-grid" id="grid3dart">
@@ -576,6 +577,65 @@
       </article>
 
     </div><!-- /grid3dart row 2 -->
+
+    <!-- Materials belong only to the existing 3D Art filtered view. -->
+    <div class="work-category materials-3d-only">
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">Procedural Materials</h3>
+    </div>
+    <div class="project-grid materials-3d-only" id="gridMaterials">
+      <article class="project-card" data-category="3dart" data-filter-only="3dart">
+        <a href="projects/materials/StoneFloor/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <img src="projects/materials/StoneFloor/images/stonefloor-Thumbnail.webp" alt="Mossy Stone procedural material sphere" class="card-img" width="800" height="800" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-cat">Substance Designer &nbsp;·&nbsp; Procedural PBR Material</span></div>
+            <h3 class="card-title">Mossy Stone</h3>
+            <span class="card-cta">View Material →</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="3dart" data-filter-only="3dart">
+        <a href="projects/materials/KitchenTile/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <img src="projects/materials/KitchenTile/images/-kitchentile-Thumbnaile.webp" alt="Blue Ceramic Tile procedural material sphere" class="card-img" width="800" height="800" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-cat">Substance Designer &nbsp;·&nbsp; Procedural PBR Material</span></div>
+            <h3 class="card-title">Blue Ceramic Tile</h3>
+            <span class="card-cta">View Material →</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="3dart" data-filter-only="3dart">
+        <a href="projects/materials/WoodenFloor/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <img src="projects/materials/WoodenFloor/images/-woodplank_Thumbnail.webp" alt="Dark Wood procedural material sphere" class="card-img" width="800" height="800" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-cat">Substance Designer &nbsp;·&nbsp; Procedural PBR Material</span></div>
+            <h3 class="card-title">Wood Materials</h3>
+            <span class="card-cta">View Material →</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="3dart" data-filter-only="3dart">
+        <a href="projects/materials/BrickWall/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <img src="projects/materials/BrickWall/images/-brickwall_Thumbnail.webp" alt="Brick procedural material sphere" class="card-img" width="800" height="800" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-cat">Substance Designer &nbsp;·&nbsp; Procedural PBR Material</span></div>
+            <h3 class="card-title">Brick</h3>
+            <span class="card-cta">View Material →</span>
+          </div>
+        </a>
+      </article>
+    </div>
 
     <!-- ── Tech Art ── -->
     <div class="work-category" id="cat-techart">
@@ -790,7 +850,8 @@
       document.body.dataset.filter = filter;
 
       allCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
+        const allowedInView = !card.dataset.filterOnly || card.dataset.filterOnly === filter;
+        if (allowedInView && (filter === 'all' || card.dataset.category === filter)) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');

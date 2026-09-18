@@ -570,6 +570,19 @@ button {
 }
 
 /* Hide categories when a filter is active */
+.materials-3d-only { display: none; }
+body[data-filter="3dart"] .work-category.materials-3d-only { display: block; }
+body[data-filter="3dart"] .project-grid.materials-3d-only { display: grid; }
+#gridMaterials .card-img-wrap { background: #202020; }
+#gridMaterials .card-img { object-fit: contain; }
+#gridMaterials { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  #gridMaterials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  #gridMaterials { grid-template-columns: 1fr; }
+}
+
 .work-category.hidden { display: none; }
 .project-grid.hidden { display: none; }
 
