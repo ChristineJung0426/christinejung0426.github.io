@@ -220,12 +220,48 @@
 
     </div><!-- /gridArProto -->
 
+    <!-- ── Product filter only: AR Interaction Prototype (reuses main title) ── -->
+    <div class="work-category card-product-only">
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">AR Interaction Prototype</h3>
+    </div>
+    <div class="project-grid project-grid-1col card-product-only">
+      <!-- Chef AR -->
+      <article class="project-card project-card-feature" data-category="product">
+        <a href="projects/ChefAR/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <div class="card-img-bg chef-ar-gradient"></div>
+            <video src="projects/ChefAR/images/Chef_AR_Mobile_high_web.mp4" aria-label="Chef AR — High-fidelity mobile companion interface" class="card-img" autoplay loop muted playsinline></video>
+            <div class="card-hover-overlay"></div>
+            <video src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" muted loop playsinline preload="none" class="card-img-hover"></video>
+            <span class="card-badge badge-grey">WIP</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat">Spatial UX &nbsp;·&nbsp; AR Prototype &nbsp;·&nbsp; Gesture Interaction</span>
+            </div>
+            <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
+            <p class="card-desc">An AR product concept spanning a high-fidelity mobile companion app and a controller-free AR cooking interface. I designed pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — with product decisions around information hierarchy and cognitive load during real-world tasks.</p>
+            <div class="card-tags">
+              <span class="tag">Product Design</span>
+              <span class="tag">Spatial UX</span>
+              <span class="tag">AR Prototype</span>
+              <span class="tag">Unity</span>
+              <span class="tag">Figma</span>
+              <span class="tag">WIP</span>
+            </div>
+            <span class="card-cta">View Case Study →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+
     <!-- ── Product & Interface Design ── -->
-    <div class="work-category" id="cat-product">
+    <div class="work-category card-product-only" id="cat-product">
       <span class="work-category-label">Category</span>
       <h3 class="work-category-title">Product & Interface Design</h3>
     </div>
-    <div class="project-grid" id="gridProduct">
+    <div class="project-grid card-product-only" id="gridProduct">
 
       <!-- S-SHO Fashion MBTI -->
       <article class="project-card" data-category="product">
@@ -275,42 +311,6 @@
       </article>
 
     </div><!-- /gridProduct -->
-
-    <!-- ── Product filter only: AR Interaction Prototype (reuses main title) ── -->
-    <div class="work-category card-product-only">
-      <span class="work-category-label">Category</span>
-      <h3 class="work-category-title">AR Interaction Prototype</h3>
-    </div>
-    <div class="project-grid project-grid-1col card-product-only">
-      <!-- Chef AR -->
-      <article class="project-card project-card-feature" data-category="product">
-        <a href="projects/ChefAR/index.html" class="card-link">
-          <div class="card-img-wrap">
-            <div class="card-img-bg chef-ar-gradient"></div>
-            <img src="projects/ChefAR/images/Chef_AR_Thumbnail.jpg" alt="Chef AR — Controller-Free AR Recipe Assistant" class="card-img" loading="lazy">
-            <div class="card-hover-overlay"></div>
-            <video src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" muted loop playsinline preload="none" class="card-img-hover"></video>
-            <span class="card-badge badge-grey">WIP</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-cat">Spatial UX &nbsp;·&nbsp; AR Prototype &nbsp;·&nbsp; Gesture Interaction</span>
-            </div>
-            <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
-            <p class="card-desc">An AR product concept spanning a high-fidelity mobile companion app and a controller-free AR cooking interface. I designed pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — with product decisions around information hierarchy and cognitive load during real-world tasks.</p>
-            <div class="card-tags">
-              <span class="tag">Product Design</span>
-              <span class="tag">Spatial UX</span>
-              <span class="tag">AR Prototype</span>
-              <span class="tag">Unity</span>
-              <span class="tag">Figma</span>
-              <span class="tag">WIP</span>
-            </div>
-            <span class="card-cta">View Case Study →</span>
-          </div>
-        </a>
-      </article>
-    </div>
 
     <!-- ── Product filter only: VR / XR — Immersive Experience & Prototyping (reuses main title) ── -->
     <div class="work-category card-product-only">
@@ -863,8 +863,8 @@
         catVrxr.classList.remove('hidden');
         catArt.classList.remove('hidden');
         catTechart.classList.remove('hidden');
-        catProduct.classList.remove('hidden');
-        gridProduct.classList.remove('hidden');
+        catProduct.classList.add('hidden');
+        gridProduct.classList.add('hidden');
         catArProto.classList.remove('hidden');
         gridArProto.classList.remove('hidden');
         catExperiments.classList.remove('hidden');
