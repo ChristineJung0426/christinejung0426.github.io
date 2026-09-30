@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, noimageindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+  <title>Brick Arch Generator — Christine Jung</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../project.css" />
+</head>
+<body>
+  <nav class="project-nav" id="projectNav">
+    <div class="project-nav-left">
+      <a href="../../index.html#techart" class="back-link">Tech Art</a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="project-nav-logo">Christine Jung</a>
+    </div>
+    <div class="project-nav-right">
+      <a href="../../about.html">About</a>
+      <a href="mailto:christineart426@gmail.com">Contact</a>
+    </div>
+  </nav>
+  <header style="padding-top: var(--nav-h);">
+    <div class="project-hero">
+      <p class="project-eyebrow">Tech Art &nbsp;·&nbsp; Artist Tool</p>
+      <h1 class="project-title">Brick Arch Generator</h1>
+      <div class="tag-row">
+        <span class="tag">Maya</span>
+        <span class="tag">Python</span>
+        <span class="tag">Artist Tool</span>
+        <span class="tag">LLM-Assisted Development</span>
+      </div>
+    </div>
+  </header>
+  <main class="project-content">
+    <section class="case-section" aria-label="Tool overview">
+      <p>Designed an artist-facing Maya tool to procedurally place bricks along different arch profiles, reducing repetitive manual placement and adding silhouette variation to modular architecture. Developed through an LLM-assisted Python workflow and used in the final European Alleyway environment.</p>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/BrickArch.gif" alt="Procedural brick arch generation in Maya">
+        </figure>
+      </div>
+    </section>
+    <section class="case-section">
+      <h3>Applied in Scene</h3>
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <img src="images/applied.png" alt="Generated brick arches applied to the bridge and doorway in European Alleyway" width="2540" height="1423" loading="lazy">
+        </figure>
+      </div>
+    </section>
+    <section class="case-section" aria-labelledby="related-project">
+      <p class="project-eyebrow" id="related-project">Related Project</p>
+      <h3>European Alleyway</h3>
+      <a href="../european-alleyway/index.html" class="card-cta">View European Alleyway →</a>
+    </section>
+  </main>
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a href="../../index.html#techart" class="back-to-work">Back to Tech Art</a>
+      <p class="footer-copy-sm">© 2026 Christine Jung</p>
+    </div>
+  </div>
+  <script>
+    const nav = document.getElementById('projectNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+  <script src="../../js/lightbox.js"></script>
+</body>
+</html>
