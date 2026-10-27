@@ -12,11 +12,11 @@
 </script>
   <meta charset="UTF-8" />
   <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=1400" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chef AR — Christine Jung</title>
-  <meta name="description" content="A controller-free AR recipe assistant for smart glasses — a WIP spatial UX prototype exploring glanceable cooking guidance and pinch-based interaction. Designed for AR glasses, prototyped in Meta Quest 3 mixed reality." />
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../project.css" />
+  <meta name="description" content="A controller-free AR recipe assistant for smart glasses — a spatial UX prototype exploring glanceable cooking guidance and pinch-based interaction. Designed for AR glasses, prototyped in Meta Quest 3 mixed reality." />
+  <link rel="stylesheet" href="../../style.css?v=6dc5bb3ca3ed" />
+  <link rel="stylesheet" href="../../project.css?v=0414794f8372" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
         </div>
         <div class="project-meta-item">
           <span class="meta-label">Status</span>
-          <span class="meta-value">High-fidelity design pass · Work in progress</span>
+          <span class="meta-value">Prototype · 2026 · Ongoing iteration</span>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
     <div class="project-about">
       <span class="project-about-label">About</span>
       <div class="project-about-body">
-        <h2>WIP Spatial UX Prototype</h2>
+        <h2>Spatial UX Prototype</h2>
         <p>Chef AR explores how smart glasses could support cooking through glanceable recipe instructions, simple gesture input, and a mobile companion app for recipe discovery and organization. After validating the core interaction model with a low-fidelity Unity prototype, I developed a high-fidelity design pass across both the AR interface and the mobile companion app.</p>
         <div class="tag-row">
           <span class="tag">AR Prototype</span>
@@ -151,6 +151,7 @@
     <!-- ===== Gesture Interaction Model ===== -->
     <section class="case-section">
       <h2>Gesture Interaction Model</h2>
+      <div class="case-table-scroll" role="region" aria-label="Interaction comparison" tabindex="0">
       <table class="case-table">
         <thead>
           <tr>
@@ -182,6 +183,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <p>To keep the interaction model consistent, I used pinch-based input as the primary gesture across the prototype. Instead of relying on abstract gestures, users interact with visible controls, making the available actions easier to discover and more reliable to perform.</p>
     </section>
 
@@ -268,9 +270,26 @@
 
     <!-- ===== Prototype Implementation ===== -->
     <section class="case-section">
-      <h2>Prototype Implementation</h2>
+      <h2>Prototype Implementation &amp; AI-Assisted Workflow</h2>
       <p>The prototype was built in Unity using world-space UI cards, TextMeshPro, recipe step data, and input-driven navigation. I used AI-assisted development as a rapid prototyping partner while owning the interaction model, user flow, Unity scene setup, and design decisions.</p>
       <p>This allowed me to quickly move from concept to a working prototype and focus on testing the core AR interaction questions: visibility, gesture clarity, step navigation, and information hierarchy.</p>
+
+      <div class="ai-workflow">
+        <h3>Working with AI</h3>
+        <h4>Figma was the spec. The headset was the test.</h4>
+        <p>With AI handling implementation, I built and iterated the low-fidelity interaction prototype on Quest 3 in one day: gestures, sizing, viewing distance, and bug fixes. Once the interactions held up, I designed the high-fidelity pass in Figma and brought it into Unity the same way, reviewing every build in the headset and directing the AI to fix what broke.</p>
+        <img class="ai-workflow-slide" src="images/chef-ar-working-with-ai.webp" width="2400" height="1350" loading="lazy" decoding="async" alt="Workflow: design in Figma, AI builds in Unity, test on Quest 3, direct the fix; with three issues caught in-headset.">
+        <div class="ai-workflow-mobile">
+          <ol class="ai-workflow-steps">
+            <li>I design in Figma</li><li>AI builds it in Unity</li><li>I test on Quest 3</li><li>I direct the fix</li>
+          </ol>
+          <div class="ai-workflow-issues">
+            <div><h5>Fidelity</h5><p>Label text blurred in the headset</p><p>Traced to texture compression → uncompressed import</p></div>
+            <div><h5>Layout</h5><p>Text overflowed and titles vanished</p><p>Canvas mapped 1:1 to Figma pixels, stray scaling removed</p></div>
+            <div><h5>State</h5><p>Progress dots didn't match my 3 frames</p><p>Dots reposition for first, middle, and last step</p></div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -280,7 +299,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <p class="footer-logo">Christine Jung</p>
-        <p class="footer-sub">AR/VR Prototyper & 3D Artist</p>
+        <p class="footer-sub">XR Prototyper &amp; Technical Artist</p>
       </div>
       <div class="footer-right">
         <a href="mailto:christineart426@gmail.com">christineart426@gmail.com</a>

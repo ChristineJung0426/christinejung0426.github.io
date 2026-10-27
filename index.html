@@ -11,14 +11,14 @@
   gtag('config', 'G-95G5SBTHBJ');
 </script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1400" />
-  <title>Christine Jung — AR/VR Prototyper & 3D Artist</title>
-  <meta name="description" content="Christine Jung — AR/VR Prototyper specializing in spatial computing and immersive 3D interactions, and Environment / Tech Artist." />
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christine Jung — XR Prototyper &amp; Technical Artist</title>
+  <meta name="description" content="Christine Jung — XR Prototyper &amp; Technical Artist specializing in spatial computing and immersive 3D interactions, and Environment / Tech Artist." />
+
+
   <link rel="icon" href="images/christinejung-favicon.ico" type="image/x-icon" />
   <!-- Apercu Pro loaded via @font-face in style.css -->
-  <link rel="stylesheet" href="style.css?v=748cfba0c5b8" />
+  <link rel="stylesheet" href="style.css?v=6dc5bb3ca3ed" />
 </head>
 <body>
 
@@ -41,13 +41,13 @@
   <section id="hero">
     <div class="hero-layout hero-layout--statement">
       <div class="hero-content hero-content--wide">
-        <p class="hero-eyebrow">3D ART · TECH ART · INTERACTIVE DESIGN · XR</p>
+        <p class="hero-eyebrow">SPATIAL UX · XR PROTOTYPING · REAL-TIME 3D · TECH ART</p>
         <h1>Christine Jung</h1>
         <p class="hero-statement">
-          Creative Technologist &amp; Interactive Prototyper
+          XR Prototyper &amp; Technical Artist
         </p>
         <p class="hero-sub-statement">
-          <span class="anno-highlight">Building rapid, high-fidelity prototypes</span> to test interactions and bring emerging ideas to life. Bridging <span class="anno-highlight anno-highlight--pink">visual design, 3D craft, and technical implementation</span>, I turn ambiguous concepts into functional interactive experiences using Unity and Unreal Engine.
+          <span class="anno-highlight">Building rapid, high-fidelity prototypes</span> to test interactions and bring emerging ideas to life. Bridging <span class="anno-highlight anno-highlight--pink">visual design, 3D craft, and technical implementation</span>, I turn ambiguous concepts into functional interactive experiences using Unity and Unreal Engine. With a background in psychology, I design through playtesting and iteration with real users.
         </p>
         <!-- Decorative elements scattered around text -->
         <div class="hero-deco-scatter" aria-hidden="true">
@@ -114,7 +114,7 @@
       <div class="section-header-row">
         <h2>Projects</h2>
         <div class="filters" role="tablist" aria-label="Filter projects">
-          <button class="filter-btn active" data-filter="all" role="tab">All</button>
+          <button class="filter-btn active" data-filter="all" role="tab">Featured</button>
           <button class="filter-btn" data-filter="vrxr" role="tab">VR / XR</button>
           <button class="filter-btn" data-filter="product" role="tab">Product Design</button>
           <button class="filter-btn" data-filter="3dart" role="tab">3D Art</button>
@@ -131,14 +131,14 @@
     <div class="project-grid" id="gridVrxr">
 
       <!-- Flow -->
-      <article class="project-card" data-category="vrxr">
+      <article id="card-flow" data-featured="true" class="project-card" data-category="vrxr product">
         <a href="projects/flow/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg flow-gradient"></div>
             <img src="images/card-previews/flow_cover-8420de75.webp" alt="Flow — Interactive Immersive Experience" class="card-img" loading="lazy" decoding="async">
             <div class="card-hover-overlay"></div>
             <video data-src="projects/flow/images/FlowTrailer_1.mp4" muted loop playsinline class="card-img-hover" preload="none"></video>
-            <span class="card-badge badge-gold">Award Winning</span>
+            <span class="card-badge badge-gold">SXSW Innovation Finalist</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -157,7 +157,7 @@
       </article>
 
       <!-- Swampocalypse -->
-      <article class="project-card" data-category="vrxr">
+      <article id="card-swamp" data-featured="true" class="project-card" data-category="vrxr">
         <a href="projects/swampocalypse/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg swamp-gradient"></div>
@@ -171,7 +171,7 @@
               <span class="card-cat">VR / XR &nbsp;·&nbsp; Motion Simulation</span>
             </div>
             <h3 class="card-title">Swampocalypse VR</h3>
-            <p class="card-desc">VR airboat experience with a 6-DOF motion simulator raising awareness about the Florida Everglades. Selected for Games for Good 2025, UM Research Grant.</p>
+            <p class="card-desc">VR airboat experience with a 6-DOF motion simulator raising awareness about the Florida Everglades. Auggie Awards nominee; demoed at Games for Good 2025.</p>
             <div class="card-tags">
               <span class="tag">Unity</span>
               <span class="tag">Meta Quest</span>
@@ -192,76 +192,42 @@
     <div class="project-grid project-grid-1col" id="gridArProto">
 
       <!-- Chef AR — horizontal feature card -->
-      <article class="project-card project-card-feature" data-category="vrxr">
+      <article id="card-chef" data-featured="true" class="project-card project-card-feature" data-category="vrxr product">
         <a href="projects/ChefAR/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg chef-ar-gradient"></div>
-            <video data-src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" class="card-img" loop muted playsinline preload="none" poster="images/card-previews/Chef_AR_ARHigh_web-aa05dedd.webp"></video>
-            <span class="card-badge badge-grey">WIP</span>
+            <video data-src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" class="card-img chef-media-ar" loop muted playsinline preload="none" poster="images/card-previews/Chef_AR_ARHigh_web-aa05dedd.webp"></video>
+            <video data-src="projects/ChefAR/images/Chef_AR_Mobile_high_web.mp4" aria-label="Chef AR mobile companion" class="card-img chef-media-product" loop muted playsinline preload="none" poster="images/card-previews/Chef_AR_Mobile_high_web-8f0034a4.webp"></video>
+            <video data-src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" aria-label="Chef AR interaction preview" muted loop playsinline class="card-img-hover chef-media-product" preload="none"></video>
+            <span class="card-badge badge-grey">Prototype · 2026</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-cat">VR / XR &nbsp;·&nbsp; Spatial UX &nbsp;·&nbsp; AR Prototype</span>
             </div>
             <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
-            <p class="card-desc">An AR prototype exploring touch-free recipe navigation for smart glasses. I tested pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — now refined into a high-fidelity AR interface with a mobile companion design.</p>
+            <p class="card-desc">An AR product concept for smart glasses: a controller-free cooking interface plus a mobile companion app. I designed and tested pinch-based step controls, ingredient scrolling, panel visibility, and target feedback, prototyped in Meta Quest 3 mixed reality.</p>
             <div class="card-tags">
               <span class="tag">AR Prototype</span>
               <span class="tag">Spatial UX</span>
               <span class="tag">Gesture Interaction</span>
               <span class="tag">Unity</span>
               <span class="tag">Figma</span>
-              <span class="tag">WIP</span>
+
             </div>
-            <span class="card-cta">View WIP Case Study →</span>
+            <span class="card-cta">View Case Study →</span>
           </div>
         </a>
       </article>
 
     </div><!-- /gridArProto -->
 
-    <!-- ── Product filter only: AR Interaction Prototype (reuses main title) ── -->
-    <div class="work-category card-product-only">
-      <span class="work-category-label">Category</span>
-      <h3 class="work-category-title">AR Interaction Prototype</h3>
-    </div>
-    <div class="project-grid project-grid-1col card-product-only">
-      <!-- Chef AR -->
-      <article class="project-card project-card-feature" data-category="product">
-        <a href="projects/ChefAR/index.html" class="card-link">
-          <div class="card-img-wrap">
-            <div class="card-img-bg chef-ar-gradient"></div>
-            <video data-src="projects/ChefAR/images/Chef_AR_Mobile_high_web.mp4" aria-label="Chef AR — High-fidelity mobile companion interface" class="card-img" loop muted playsinline preload="none" poster="images/card-previews/Chef_AR_Mobile_high_web-8f0034a4.webp"></video>
-            <div class="card-hover-overlay"></div>
-            <video data-src="projects/ChefAR/images/Chef_AR_ARHigh_web.mp4" muted loop playsinline class="card-img-hover" preload="none"></video>
-            <span class="card-badge badge-grey">WIP</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-cat">Spatial UX &nbsp;·&nbsp; AR Prototype &nbsp;·&nbsp; Gesture Interaction</span>
-            </div>
-            <h3 class="card-title">Chef AR — Controller-Free AR Recipe Assistant</h3>
-            <p class="card-desc">An AR product concept spanning a high-fidelity mobile companion app and a controller-free AR cooking interface. I designed pinch-based step controls, ingredient scrolling, panel visibility, and target feedback — with product decisions around information hierarchy and cognitive load during real-world tasks.</p>
-            <div class="card-tags">
-              <span class="tag">Product Design</span>
-              <span class="tag">Spatial UX</span>
-              <span class="tag">AR Prototype</span>
-              <span class="tag">Unity</span>
-              <span class="tag">Figma</span>
-              <span class="tag">WIP</span>
-            </div>
-            <span class="card-cta">View Case Study →</span>
-          </div>
-        </a>
-      </article>
-    </div>
-
     <!-- ── Product & Interface Design ── -->
-    <div class="work-category card-product-only" id="cat-product">
+    <div class="work-category" id="cat-product">
       <span class="work-category-label">Category</span>
       <h3 class="work-category-title">Product & Interface Design</h3>
     </div>
-    <div class="project-grid card-product-only" id="gridProduct">
+    <div class="project-grid" id="gridProduct">
 
       <!-- S-SHO Fashion MBTI -->
       <article class="project-card" data-category="product">
@@ -272,7 +238,7 @@
           </div>
           <div class="card-body">
             <div class="card-meta">
-              <span class="card-cat">Product Design &nbsp;·&nbsp; Mobile UI &nbsp;·&nbsp; Viral Experience</span>
+              <span class="card-cat">Earlier Work · Mobile UI · 2019–2021</span>
             </div>
             <h3 class="card-title">S-SHO Fashion MBTI Test</h3>
             <p class="card-desc">A mobile-first fashion personality test designed as a lightweight viral marketing experience. I created high-fidelity interface screens, visual assets, and a playful mobile flow optimized for quick engagement.</p>
@@ -296,7 +262,7 @@
           </div>
           <div class="card-body">
             <div class="card-meta">
-              <span class="card-cat">Product Design &nbsp;·&nbsp; Hackathon &nbsp;·&nbsp; Mobile Prototype</span>
+              <span class="card-cat">Earlier Work · Hackathon · 2020</span>
             </div>
             <h3 class="card-title">ViewDeFi</h3>
             <p class="card-desc">A hackathon-winning mobile product concept for blockchain-based real estate asset management. I translated a complex data-heavy concept into clear mobile dashboard, detail, and claim/request flows under a rapid sprint timeline.</p>
@@ -312,49 +278,21 @@
 
     </div><!-- /gridProduct -->
 
-    <!-- ── Product filter only: VR / XR — Immersive Experience & Prototyping (reuses main title) ── -->
-    <div class="work-category card-product-only">
+    <div class="work-category" id="cat-product-flow" hidden>
       <span class="work-category-label">Category</span>
-      <h3 class="work-category-title">VR / XR — Immersive Experience & Prototyping</h3>
+      <h3 class="work-category-title">VR / XR — Immersive Experience &amp; Prototyping</h3>
     </div>
-    <div class="project-grid project-grid-1col card-product-only">
-      <!-- Flow -->
-      <article class="project-card project-card-feature" data-category="product">
-        <a href="projects/flow/index.html" class="card-link">
-          <div class="card-img-wrap">
-            <div class="card-img-bg flow-gradient"></div>
-            <img src="images/card-previews/flow_cover-8420de75.webp" alt="Flow — Interactive Immersive Experience" class="card-img" loading="lazy" decoding="async">
-            <div class="card-hover-overlay"></div>
-            <video data-src="projects/flow/images/FlowTrailer_1.mp4" muted loop playsinline class="card-img-hover" preload="none"></video>
-            <span class="card-badge badge-gold">Award Winning</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-cat">Interactive Experience &nbsp;·&nbsp; Immersive UX &nbsp;·&nbsp; Body Tracking</span>
-            </div>
-            <h3 class="card-title">Flow — Interactive Immersive Experience</h3>
-            <p class="card-desc">An award-winning immersive experience combining interaction design, body-tracking UX, and a large-format spatial interface. I shaped the interaction model and visual system across a 270° curved screen — from user flows to on-screen feedback.</p>
-            <div class="card-tags">
-              <span class="tag">Interaction Design</span>
-              <span class="tag">UX System</span>
-              <span class="tag">Body Tracking</span>
-              <span class="tag">Unreal Engine 5</span>
-            </div>
-            <span class="card-cta">View Case Study →</span>
-          </div>
-        </a>
-      </article>
-    </div>
+    <div class="project-grid project-grid-1col" id="gridProductFlow" hidden></div>
 
     <!-- ── Experiments & Exploration ── -->
     <div class="work-category work-category-sub" id="cat-experiments">
-      <span class="work-category-label">Experiments &amp; Exploration</span>
-      <h3 class="work-category-title">1–2 week sprints around emerging hardware</h3>
+      <span class="work-category-label">RAPID PROTOTYPES</span>
+      <h3 class="work-category-title">1–2 week sprints on emerging hardware: build, playtest, iterate</h3>
     </div>
     <div class="project-grid project-grid-experiments" id="gridExperiments">
 
       <!-- Pipe Overflow -->
-      <article class="project-card project-card-sm" data-category="vrxr">
+      <article data-rapid="true" class="project-card project-card-sm" data-category="vrxr">
         <a href="projects/bvw/pipe-overflow.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg bvw-gradient"></div>
@@ -376,7 +314,7 @@
       </article>
 
       <!-- Hotdog Party -->
-      <article class="project-card project-card-sm" data-category="vrxr">
+      <article data-rapid="true" class="project-card project-card-sm" data-category="vrxr">
         <a href="projects/bvw/hotdog-party.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg bvw-gradient"></div>
@@ -398,7 +336,7 @@
       </article>
 
       <!-- Mushroomy's Island -->
-      <article class="project-card project-card-sm" data-category="vrxr">
+      <article data-rapid="true" class="project-card project-card-sm" data-category="vrxr">
         <a href="projects/bvw/mushroomys-island.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg bvw-gradient"></div>
@@ -420,7 +358,7 @@
       </article>
 
       <!-- Fantasy Realm -->
-      <article class="project-card project-card-sm" data-category="vrxr">
+      <article data-rapid="true" class="project-card project-card-sm" data-category="vrxr">
         <a href="projects/bvw/fantasy-realm.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg bvw-gradient"></div>
@@ -442,6 +380,12 @@
       </article>
 
     </div><!-- /gridExperiments -->
+    <div class="work-category" id="cat-featured-craft" hidden>
+      <span class="work-category-label">Category</span>
+      <h3 class="work-category-title">3D &amp; Technical Art</h3>
+    </div>
+    <div class="project-grid grid-3col" id="gridFeaturedCraft" hidden></div>
+    <div class="featured-craft-link" hidden><a href="#3d" class="card-cta">See all 3D &amp; Tech Art →</a></div>
 
     <!-- ── 3D Art ── -->
     <div class="work-category" id="cat-3dart">
@@ -452,12 +396,12 @@
     <div class="project-grid" id="grid3dart">
 
       <!-- Granny's Kitchen -->
-      <article class="project-card" data-category="3dart">
+      <article id="card-kitchen" data-featured="true" class="project-card" data-category="3dart">
         <a href="projects/grannys-kitchen/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg kitchen-gradient"></div>
             <img src="images/card-previews/Kitchen_Render_1-8ffedf73.webp" alt="Granny's Baking Kitchen" class="card-img" loading="lazy" decoding="async">
-            <span class="card-badge badge-gold">Award Winning</span>
+            <span class="card-badge badge-gold">80LV 1st Place</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -478,27 +422,26 @@
       </article>
 
       <!-- European Alleyway -->
-      <article class="project-card" data-category="3dart">
+      <article id="card-alleyway" data-featured="true" class="project-card" data-category="3dart">
         <a href="projects/european-alleyway/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg alley-gradient"></div>
             <img src="images/card-previews/EuropeanAlleywayRender-de1ca7e5.webp" alt="European Alleyway" class="card-img" loading="lazy" decoding="async">
             <span class="card-badge badge-grey">WIP</span>
           </div>
-          <div class="card-body">
+          </a><div class="card-body"><a href="projects/european-alleyway/index.html" class="card-title-link">
             <div class="card-meta">
               <span class="card-cat">3D Art &nbsp;·&nbsp; Environment Art</span>
             </div>
             <h3 class="card-title">European Alleyway</h3>
-            <p class="card-desc">Sun-drenched Mediterranean alleyway with hand-crafted architectural detail. All hero assets and tileable materials authored from scratch.</p>
+            </a><p class="card-desc">Sun-drenched Mediterranean alleyway with hand-crafted architectural detail. All hero assets and tileable materials authored from scratch. Includes a custom Maya Python <a href="projects/Arch_Generator_Tool/index.html">brick-arch tool</a>.</p><a href="projects/european-alleyway/index.html" class="card-detail-link">
             <div class="card-tags">
               <span class="tag">Unreal Engine 5</span>
               <span class="tag">Maya</span>
               <span class="tag">Substance Designer</span>
             </div>
             <span class="card-cta">View Project →</span>
-          </div>
-        </a>
+        </a></div>
       </article>
 
     </div><!-- /grid3dart row 1 -->
@@ -579,7 +522,7 @@
     </div><!-- /grid3dart row 2 -->
 
     <!-- Materials belong only to the existing 3D Art filtered view. -->
-    <div class="work-category materials-3d-only">
+    <div class="work-category materials-3d-only" id="cat-materials">
       <span class="work-category-label">Category</span>
       <h3 class="work-category-title">Procedural Materials</h3>
     </div>
@@ -692,10 +635,10 @@
         </a>
       </article>
 
-      <article class="project-card" data-category="techart" data-tech-order="1" data-main-order="2">
+      <article id="card-arch" data-featured="true" class="project-card" data-category="techart" data-tech-order="1" data-main-order="2">
         <a href="projects/Arch_Generator_Tool/index.html" class="card-link">
           <div class="card-img-wrap">
-            <video data-src="images/card-previews/BrickArch-8309be70.mp4" aria-label="Brick Arch Generator — procedural brick placement in Maya" class="card-img" preload="none" muted loop playsinline poster="images/card-previews/BrickArch-8309be70.webp"></video>
+            <video data-src="images/card-previews/BrickArch-8309be70.mp4" aria-label="Brick Arch Generator — procedural brick placement in Maya" class="card-img" preload="none" muted loop playsinline poster="images/card-previews/BrickArch-8309be70.webp"></video><span class="card-badge badge-gold">Artist Tool</span>
             <img src="images/card-previews/applied-47e61854.webp" alt="Brick arches applied in the European Alleyway environment" class="card-img-hover" loading="lazy" decoding="async">
           </div>
           <div class="card-body">
@@ -820,7 +763,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <p class="footer-logo">Christine Jung</p>
-        <p class="footer-sub">AR/VR Prototyper & 3D Artist</p>
+        <p class="footer-sub">XR Prototyper &amp; Technical Artist</p>
       </div>
       <div class="footer-right">
         <a href="mailto:christineart426@gmail.com">christineart426@gmail.com</a>
@@ -848,109 +791,47 @@
     // ── Filter buttons ──
     const filterBtns = document.querySelectorAll('.filter-btn');
     const allCards = document.querySelectorAll('.project-card');
-    const catVrxr = document.getElementById('cat-vrxr');
-    const catArt = document.getElementById('cat-3dart');
-    const catTechart = document.getElementById('cat-techart');
-    const catProduct = document.getElementById('cat-product');
-    const gridProduct = document.getElementById('gridProduct');
-    const catArProto = document.getElementById('cat-arproto');
-    const gridArProto = document.getElementById('gridArProto');
-    const catExperiments = document.getElementById('cat-experiments');
-    const gridExperiments = document.getElementById('gridExperiments');
-    const grid3dartRow2 = document.getElementById('grid3dart-row2');
-
     const VALID_FILTERS = ['all', 'vrxr', 'product', '3dart', 'techart'];
-
+    // One card per project. Restore category homes before composing each view.
+    const cardHomes = [...allCards].map(card => ({card, parent: card.parentElement}));
+    const byId = id => document.getElementById(id);
     function applyFilter(filter) {
       if (!VALID_FILTERS.includes(filter)) filter = 'all';
-
-      filterBtns.forEach(b => {
-        b.classList.toggle('active', b.dataset.filter === filter);
-      });
-
       document.body.dataset.filter = filter;
-      // Match visual and keyboard order to the selected view.
-      const techGrid = document.getElementById('gridTechart');
-      const orderKey = filter === 'techart' ? 'techOrder' : 'mainOrder';
-      [...techGrid.querySelectorAll('.project-card')]
-        .sort((a, b) => Number(a.dataset[orderKey]) - Number(b.dataset[orderKey]))
-        .forEach(card => techGrid.appendChild(card));
-
-      allCards.forEach(card => {
-        const allowedInView = !card.dataset.filterOnly || card.dataset.filterOnly === filter;
-        if (allowedInView && (filter === 'all' || card.dataset.category === filter)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+      filterBtns.forEach(btn => {
+        const selected = btn.dataset.filter === filter;
+        btn.classList.toggle('active', selected);
+        btn.setAttribute('aria-selected', selected);
       });
-
-      // Show/hide category headers
+      cardHomes.forEach(({card, parent}) => parent.appendChild(card));
+      byId('card-flow').classList.toggle('project-card-feature', filter === 'product');
       if (filter === 'all') {
-        catVrxr.classList.remove('hidden');
-        catArt.classList.remove('hidden');
-        catTechart.classList.remove('hidden');
-        catProduct.classList.add('hidden');
-        gridProduct.classList.add('hidden');
-        catArProto.classList.remove('hidden');
-        gridArProto.classList.remove('hidden');
-        catExperiments.classList.remove('hidden');
-        gridExperiments.classList.remove('hidden');
-        grid3dartRow2.classList.remove('hidden');
-      } else if (filter === 'vrxr') {
-        catVrxr.classList.remove('hidden');
-        catArt.classList.add('hidden');
-        catTechart.classList.add('hidden');
-        catProduct.classList.add('hidden');
-        gridProduct.classList.add('hidden');
-        catArProto.classList.remove('hidden');
-        gridArProto.classList.remove('hidden');
-        catExperiments.classList.remove('hidden');
-        gridExperiments.classList.remove('hidden');
-        grid3dartRow2.classList.add('hidden');
+        ['kitchen', 'alleyway', 'arch'].forEach(id => byId('gridFeaturedCraft').appendChild(byId('card-' + id)));
       } else if (filter === 'product') {
-        catVrxr.classList.add('hidden');
-        catArt.classList.add('hidden');
-        catTechart.classList.add('hidden');
-        catProduct.classList.remove('hidden');
-        gridProduct.classList.remove('hidden');
-        catArProto.classList.add('hidden');
-        gridArProto.classList.add('hidden');
-        catExperiments.classList.add('hidden');
-        gridExperiments.classList.add('hidden');
-        grid3dartRow2.classList.add('hidden');
-      } else if (filter === '3dart') {
-        catVrxr.classList.add('hidden');
-        catArt.classList.remove('hidden');
-        catTechart.classList.add('hidden');
-        catProduct.classList.add('hidden');
-        gridProduct.classList.add('hidden');
-        catArProto.classList.add('hidden');
-        gridArProto.classList.add('hidden');
-        catExperiments.classList.add('hidden');
-        gridExperiments.classList.add('hidden');
-        grid3dartRow2.classList.remove('hidden');
-      } else if (filter === 'techart') {
-        catVrxr.classList.add('hidden');
-        catArt.classList.add('hidden');
-        catTechart.classList.remove('hidden');
-        catProduct.classList.add('hidden');
-        gridProduct.classList.add('hidden');
-        catArProto.classList.add('hidden');
-        gridArProto.classList.add('hidden');
-        catExperiments.classList.add('hidden');
-        gridExperiments.classList.add('hidden');
-        grid3dartRow2.classList.add('hidden');
+        byId('gridProductFlow').appendChild(byId('card-flow'));
       }
-
-      // Stagger visible cards in
-      let delay = 0;
+      [...byId('gridTechart').children]
+        .sort((a,b) => Number(a.dataset.techOrder) - Number(b.dataset.techOrder))
+        .forEach(card => byId('gridTechart').appendChild(card));
       allCards.forEach(card => {
-        if (!card.classList.contains('hidden')) {
-          card.style.transitionDelay = delay + 'ms';
-          delay += 60;
-        }
+        const show = filter === 'all'
+          ? card.dataset.featured === 'true' || card.dataset.rapid === 'true'
+          : card.dataset.category.split(' ').includes(filter);
+        card.classList.toggle('hidden', !show);
       });
+      const groups = {
+        gridVrxr: 'cat-vrxr', gridArProto: 'cat-arproto', gridProduct: 'cat-product',
+        gridProductFlow: 'cat-product-flow', gridExperiments: 'cat-experiments',
+        gridFeaturedCraft: 'cat-featured-craft', grid3dart: 'cat-3dart',
+        gridTechart: 'cat-techart', gridMaterials: 'cat-materials'
+      };
+      document.querySelectorAll('#work .project-grid').forEach(grid => {
+        const show = !!grid.querySelector('.project-card:not(.hidden)');
+        grid.hidden = !show;
+        if (groups[grid.id] && byId(groups[grid.id])) byId(groups[grid.id]).hidden = !show;
+      });
+      document.querySelector('.featured-craft-link').hidden = filter !== 'all';
+      document.querySelector('.tech-art-view-all').hidden = true;
     }
 
     // Short public URLs; keep existing shared links working.

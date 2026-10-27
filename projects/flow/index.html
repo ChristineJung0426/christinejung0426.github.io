@@ -12,11 +12,11 @@
 </script>
   <meta charset="UTF-8" />
   <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=1400" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flow — Christine Jung</title>
   <!-- Apercu Pro loaded via @font-face in style.css -->
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../project.css" />
+  <link rel="stylesheet" href="../../style.css?v=6dc5bb3ca3ed" />
+  <link rel="stylesheet" href="../../project.css?v=0414794f8372" />
 </head>
 <body>
 
@@ -46,7 +46,7 @@
       <div class="project-meta-grid">
         <div class="project-meta-item">
           <span class="meta-label">Role</span>
-          <span class="meta-value">Technical Environment Artist &amp; XR Prototyper</span>
+          <span class="meta-value">3D Technical Artist &amp; XR Prototyper</span>
         </div>
         <div class="project-meta-item">
           <span class="meta-label">Tools</span>
@@ -65,16 +65,16 @@
           <span class="meta-value">70+ sessions &nbsp;·&nbsp; 100+ guests</span>
         </div>
       </div>
-      <div class="project-awards">
-        <span class="award-badge">Innovation Awards Finalist — SXSW 2025</span>
-        <span class="award-badge">Award of Excellence — Communication Arts Interactive Annual 2025</span>
-        <span class="award-badge">SONA Immersive Storytelling Festival</span>
-        <span class="award-badge">Showcase — Shenzhen, China</span>
-      </div>
+      <section class="recognition-list"><h2>Recognition</h2><ul><li><a href="https://sxsw.com/interactive/2025/2025-sxsw-innovation-awards-finalists-announced/" target="_blank" rel="noopener">Innovation Awards Finalist — SXSW 2025 ↗</a></li><li><a href="https://www.commarts.com/project/37565/flow" target="_blank" rel="noopener">Award of Excellence — Communication Arts Interactive Annual 2025 ↗</a></li><li><a href="https://www.manamana.net/video/detail?id=2654399#!en" target="_blank" rel="noopener">Permanent installation — Shenzhen, China (Dec 2024) ↗</a></li><li><a href="https://www.sonafestival.com/sona-selection-25" target="_blank" rel="noopener">Festival Showcase — SONA Immersive Storytelling Festival 2025, Pittsburgh ↗</a></li></ul></section><section class="recognition-list"><h2>Press</h2><ul><li><a href="https://www.700technologydrive.com/stories/flow-where-art-dance-technology-and-tradition-converge" target="_blank" rel="noopener">Flow: Where Art, Dance, Technology, and Tradition Converge ↗</a></li><li><a href="https://etc.cmu.edu/our-work/case-studies/flow" target="_blank" rel="noopener">Flow case study (Carnegie Mellon ETC) ↗</a></li><li><a href="https://www.cmu.edu/news/stories/archives/2025/march/carnegie-mellon-community-shines-at-sxsw-2025-an-intersection-of-culture-tech-and-innovation" target="_blank" rel="noopener">Carnegie Mellon Community Shines at SXSW 2025 ↗</a></li></ul></section>
     </div>
   </header>
 
   <main class="project-content">
+    <section class="case-section project-overview" aria-label="Project overview">
+      <p><strong>Team:</strong> 1 PD, 2 Eng, 1 2D Art, 2 3D Tech Art · 5 months</p>
+      <p><strong>My role:</strong> 3D Technical Artist &amp; XR Prototyper — env art, shaders, spatial UX, co-led playtests</p>
+      <div class="recognition-logos"><figure class="recognition-logo recognition-logo-ca"><picture><source media="(prefers-color-scheme: dark)" srcset="images/awards/logo-ca-mono-white.png"><img src="images/awards/logo-ca-mono-dark.png" alt="Communication Arts" loading="lazy" decoding="async"></picture><figcaption>Award of Excellence</figcaption></figure><figure class="recognition-logo "><picture><source media="(prefers-color-scheme: dark)" srcset="images/awards/logo-sxsw-mono-white.png"><img src="images/awards/logo-sxsw-mono-dark.png" alt="SXSW" loading="lazy" decoding="async"></picture><figcaption>Innovation Awards Finalist</figcaption></figure><figure class="recognition-logo "><picture><source media="(prefers-color-scheme: dark)" srcset="images/awards/logo-sona-mono-white.png"><img src="images/awards/logo-sona-mono-dark.png" alt="SONA Immersive Storytelling Festival" loading="lazy" decoding="async"></picture><figcaption>Festival Showcase</figcaption></figure></div>
+    </section>
 
     <!-- About -->
     <div class="project-about">
@@ -89,7 +89,7 @@
         </p>
         <p>
           Over 5 months, we conducted 70+ playtest sessions with 100+ guests, continuously
-          iterating on the physical-to-virtual interactions based on user data. My primary
+          iterating on the physical-to-virtual interactions based on playtest observations and guest feedback. My primary
           contributions spanned technical environment art, custom shader development, and
           spatial UX design.
         </p>
@@ -176,7 +176,7 @@
       </div>
       <div class="callout callout-solution">
         <div class="callout-label">Solution 2: Blinking Outline Shader</div>
-        <p>To provide non-intrusive UI cues, I developed and implemented a <strong>blinking outline shader</strong> on interactable objects. Combined with the virtual character's movement hints, this clearly indicated interaction opportunities and completely resolved user confusion.</p>
+        <p>To provide non-intrusive UI cues, I developed and implemented a <strong>blinking outline shader</strong> on interactable objects. Combined with the virtual character's movement hints, this clearly signaled interaction opportunities and sharply reduced moments where guests got stuck.</p>
       </div>
       <div class="gallery gallery-1">
         <figure class="gallery-item">
@@ -203,7 +203,7 @@
       <div class="callout callout-solution">
         <div class="callout-label">Solution: Dynamic Fog as a Spatial UX Tool</div>
         <p>I conceptualized and created a <strong>Dynamic Fog shader</strong> that dynamically controlled the player's Field of View (FOV) — subtly obscuring non-active areas and naturally guiding their attention to the active interaction zone.</p>
-        <p style="margin-top: 0.75rem;"><strong>Result:</strong> Combined with visual affordances, <strong>100% of playtesters</strong> successfully navigated the experience without confusion.</p>
+        <p style="margin-top: 0.75rem;"><strong>Result:</strong> In later playtests, guests consistently found the active interaction zone without host intervention.</p>
       </div>
       <div class="gallery gallery-1">
         <figure class="gallery-item">
@@ -225,7 +225,7 @@
       <h2>Playtesting & Cross-Functional Iteration</h2>
       <ul>
         <li>
-          <strong>Data-Driven Iteration:</strong> Co-facilitated 70+ playtest sessions with 100+
+          <strong>Playtest-Driven Iteration:</strong> Co-facilitated 70+ playtest sessions with 100+
           guests. Documented qualitative feedback and collaborated closely with engineers to refine
           the interaction mechanics and narrative pacing.
         </li>

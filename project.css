@@ -873,3 +873,41 @@
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+/* Recognition uses supplied monochrome artwork without CSS color filters. */
+.recognition-list { margin-top: 1.75rem; }
+.recognition-list h2 { font-size: .75rem; text-transform: uppercase; letter-spacing: .13em; color: var(--accent); margin-bottom: .65rem; }
+.recognition-list ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.recognition-list li, .project-website { font-size: .9rem; line-height: 1.65; }
+.recognition-list a, .project-website a, .recognition-logo a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent-light); text-underline-offset: 4px; }
+.recognition-list a:hover, .project-website a:hover { color: var(--accent); }
+.project-website { margin-top: 1rem; }
+.recognition-logos { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 2.5rem; padding: 2rem; margin-top: 1.5rem; background: #fafafa; color: #333; border-radius: 12px; }
+.recognition-logo { margin: 0; flex: 0 1 210px; text-align: center; }
+.recognition-logo picture { display: flex; align-items: center; justify-content: center; height: 64px; }
+.recognition-logo img { height: 40px; width: auto; max-width: 100%; object-fit: contain; }
+.recognition-logo-ca img { height: 56px; }
+.recognition-logo figcaption { font-size: .8rem; line-height: 1.5; margin-top: .8rem; }
+.recognition-logos-kitchen { justify-content: flex-start; padding: 1.2rem; }
+.recognition-logos-kitchen .recognition-logo { flex-basis: 310px; }
+.recognition-logos-kitchen img { height: 32px; }
+.ai-workflow { margin-top: 3rem; }
+.ai-workflow h4 { font-size: clamp(1.3rem, 3vw, 1.8rem); line-height: 1.35; margin: .5rem 0 1rem; }
+.ai-workflow-slide { display: block; width: 100%; height: auto; margin-top: 2rem; border-radius: 12px; }
+.ai-workflow-mobile { display: none; }
+@media (prefers-color-scheme: dark) {
+  .recognition-logos { background: #202124; color: #f5f5f5; }
+}
+@media (max-width: 640px) {
+  .recognition-logos { gap: 1.5rem; padding: 1.5rem 1rem; }
+  .ai-workflow-slide { display: none; }
+  .ai-workflow-mobile { display: block; }
+  .ai-workflow-steps { list-style: decimal-leading-zero; padding-left: 2rem; }
+  .ai-workflow-steps li { padding: .75rem; margin: .5rem 0; background: var(--surface-hi); border-radius: 8px; }
+  .ai-workflow-steps li:last-child { background: var(--accent); color: white; }
+  .ai-workflow-issues { display: grid; gap: 1rem; margin-top: 1.5rem; }
+  .ai-workflow-issues > div { background: var(--surface-hi); padding: 1rem; border-radius: 8px; }
+  .ai-workflow-issues h5 { color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .8rem; }
+  .ai-workflow-issues p { font-size: .95rem; margin-top: .5rem; }
+}
+
+.case-table-scroll { max-width: 100%; overflow-x: auto; }
