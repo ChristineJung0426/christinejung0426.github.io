@@ -1,0 +1,3 @@
+#!/bin/sh
+# Refresh the ?v= stylesheet hashes so CSS edits actually reach browsers.
+exec python3 "$(git rev-parse --show-toplevel)/scripts/bump-css-version.py" --stage
