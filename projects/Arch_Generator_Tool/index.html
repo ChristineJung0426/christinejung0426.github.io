@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
   <title>Brick Arch Generator — Christine Jung</title>
+  <meta name="description" content="An artist-facing Maya tool that procedurally places bricks along an arch curve, with layout and randomness controls for silhouette variation. Used in the European Alleyway environment." />
   <link rel="stylesheet" href="../../style.css?v=3e7d2d85c0a8" />
   <link rel="stylesheet" href="../../project.css?v=0414794f8372" />
 </head>
@@ -21,10 +22,31 @@
       <a href="mailto:christineart426@gmail.com">Contact</a>
     </div>
   </nav>
+
   <header style="padding-top: var(--nav-h);">
     <div class="project-hero">
       <p class="project-eyebrow">Tech Art &nbsp;·&nbsp; Artist Tool</p>
       <h1 class="project-title">Brick Arch Generator</h1>
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Solo — tool design and Python scripting</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Maya, Python, LLM-assisted development</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Used in</span>
+          <span class="meta-value">European Alleyway</span>
+        </div>
+        <!-- HIDDEN — needs Christine: Year not provided. Restore this block once the year is confirmed.
+        <div class="project-meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">[TODO: Christine]</span>
+        </div>
+        -->
+      </div>
       <div class="tag-row">
         <span class="tag">Maya</span>
         <span class="tag">Python</span>
@@ -33,15 +55,74 @@
       </div>
     </div>
   </header>
+
   <main class="project-content">
-    <section class="case-section" aria-label="Tool overview">
-      <p>Designed an artist-facing Maya tool to procedurally place bricks along different arch profiles, reducing repetitive manual placement and adding silhouette variation to modular architecture. Developed through an LLM-assisted Python workflow and used in the final European Alleyway environment.</p>
+
+    <!-- ===== Hero ===== -->
+    <section class="case-section" aria-label="Generated arches">
       <div class="gallery gallery-1">
         <figure class="gallery-item">
-          <img src="images/BrickArch.gif" alt="Procedural brick arch generation in Maya">
+          <img src="images/BrickArch_Pack.jpg" alt="Five brick arch variations generated with the Maya tool" width="2400" height="1350">
         </figure>
       </div>
     </section>
+
+    <!-- ===== The Problem ===== -->
+    <section class="case-section">
+      <div class="callout">
+        <div class="callout-label">The Problem</div>
+        <p>Placing bricks one by one along an arch was slow and repetitive, and hand-placed arches all looked the same. I needed many arch shapes with natural silhouette variation for the alleyway's doorways and bridge.</p>
+      </div>
+    </section>
+
+    <!-- ===== The Tool ===== -->
+    <section class="case-section">
+      <h2>The Tool</h2>
+      <p>The artist-facing panel in Maya: pick an arch curve and a block, set layout and randomness, then rebuild.</p>
+
+      <div class="gallery gallery-1">
+        <figure class="gallery-item">
+          <video src="images/brick-arch-demo-2x.mp4" muted autoplay loop playsinline controls></video>
+          <p class="media-note">2x speed</p>
+          <figcaption>Adjusting block count, scale, taper, and seed rebuilds the arch live in Maya.</figcaption>
+        </figure>
+      </div>
+
+      <div class="tool-spec-grid">
+        <div class="tool-spec-item">
+          <span class="tool-spec-label">Source</span>
+          <p>Draw any curve as the arch shape; pick the block mesh to place</p>
+        </div>
+        <div class="tool-spec-item">
+          <span class="tool-spec-label">Layout</span>
+          <p>Block count, auto-fit block size, mortar gap, wedge taper</p>
+        </div>
+        <div class="tool-spec-item">
+          <span class="tool-spec-label">Randomness</span>
+          <p>Seed, position and rotation jitter, scale and depth variation, face flips</p>
+        </div>
+        <div class="tool-spec-item">
+          <span class="tool-spec-label">Workflow</span>
+          <p>Auto rebuild on change, one-click Build / Rebuild, Reset to Defaults</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Works on existing geometry ===== -->
+    <section class="case-section">
+      <h3>Works on Existing Geometry</h3>
+      <div class="case-split">
+        <figure class="gallery-item">
+          <img src="images/BrickArch.gif" alt="Bricks generated around an arch opening in a wall in Maya" loading="lazy">
+          <figcaption>Running the tool along the edge of an arch opening cut into a wall.</figcaption>
+        </figure>
+        <div class="case-split-body">
+          <p>The tool is not limited to free-standing arches. Selecting the edge of an existing arch and converting it to a curve gives the tool a path to build along, so the same controls work on openings already modelled into walls.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Applied in Scene ===== -->
     <section class="case-section">
       <h3>Applied in Scene</h3>
       <div class="gallery gallery-1">
@@ -50,18 +131,29 @@
         </figure>
       </div>
     </section>
+
+    <!-- ===== How I Built It ===== -->
+    <section class="case-section">
+      <h2>How I Built It</h2>
+      <p>I designed the tool's behavior and controls, and used an LLM to help write the Maya Python. I tested each version in Maya and adjusted it until the output worked in the scene.</p>
+    </section>
+
+    <!-- ===== Related Project ===== -->
     <section class="case-section" aria-labelledby="related-project">
       <p class="project-eyebrow" id="related-project">Related Project</p>
       <h3>European Alleyway</h3>
       <a href="../european-alleyway/index.html" class="card-cta">View European Alleyway →</a>
     </section>
+
   </main>
+
   <div class="project-footer">
     <div class="project-footer-inner">
       <a href="../../index.html#techart" class="back-to-work">Back to Tech Art</a>
       <p class="footer-copy-sm">© 2026 Christine Jung</p>
     </div>
   </div>
+
   <script>
     const nav = document.getElementById('projectNav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });

@@ -565,6 +565,54 @@
   width: 30%;
 }
 
+/* ── Tool parameter summary — groups side by side, stacking on narrow screens ── */
+.tool-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.tool-spec-item {
+  padding: 1.1rem 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.tool-spec-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.tool-spec-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .tool-spec-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .tool-spec-grid { grid-template-columns: 1fr; }
+}
+
+/* Small note under a figure, e.g. playback speed */
+.media-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
 /* ── Tags row ── */
 .tag-row {
   display: flex;
