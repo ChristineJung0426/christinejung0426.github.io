@@ -13,12 +13,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1400" />
   <title>Christine Jung — XR Prototyper &amp; Technical Artist</title>
-  <meta name="description" content="Christine Jung — XR Prototyper &amp; Technical Artist specializing in spatial computing and immersive 3D interactions, and Environment / Tech Artist." />
+  <meta name="description" content="Christine Jung — XR Prototyper &amp; Technical Artist. Spatial UX prototypes, real-time 3D, and procedural tools in Unity and Unreal Engine." />
 
 
   <link rel="icon" href="images/christinejung-favicon.ico" type="image/x-icon" />
   <!-- Apercu Pro loaded via @font-face in style.css -->
-  <link rel="stylesheet" href="style.css?v=f955c8bbb685" />
+  <link rel="stylesheet" href="style.css?v=ca204aaca699" />
 </head>
 <body>
 
@@ -350,7 +350,7 @@
       <h3 class="work-category-title">3D &amp; Technical Art</h3>
     </div>
     <div class="project-grid grid-3col" id="gridFeaturedCraft" hidden></div>
-    <div class="featured-craft-link" hidden><a href="#3d" class="card-cta">See all 3D &amp; Tech Art →</a></div>
+    <div class="featured-craft-link" hidden><a href="#3d" class="card-cta">All 3D Art →</a><a href="#techart" class="card-cta">All Tech Art →</a></div>
 
     <!-- ── 3D Art ── -->
     <div class="work-category" id="cat-3dart">
@@ -556,6 +556,30 @@
       <span class="work-category-label">Category</span>
       <h3 class="work-category-title">Tech Art — Procedural Tools &amp; VFX</h3>
     </div>
+    <div class="project-grid project-grid-1col" id="gridTechartFeature">
+      <article id="card-arch" data-featured="true" class="project-card" data-category="techart" data-tech-order="1" data-main-order="2">
+        <a href="projects/Arch_Generator_Tool/index.html" class="card-link">
+          <div class="card-img-wrap">
+            <img src="images/card-previews/brick-arch-thumb.webp" alt="Three brick arch variations generated with the Maya tool" class="card-img" loading="lazy" decoding="async"><span class="card-badge badge-gold">Artist Tool</span>
+            <video data-src="images/card-previews/brick-arch-hover.mp4" aria-label="A brick arch being generated in Maya" class="card-img-hover" preload="none" muted loop playsinline></video>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-cat">Tech Art &nbsp;·&nbsp; Artist Tool</span></div>
+            <h3 class="card-title">Brick Arch Generator</h3>
+            <p class="card-desc">An artist-facing Maya tool for procedural brick arches, reducing repetitive placement and adding silhouette variation. Used in European Alleyway.</p>
+            <div class="card-tags">
+              <span class="tag">Maya</span>
+              <span class="tag">Python</span>
+              <span class="tag">Artist Tool</span>
+              <span class="tag">LLM-Assisted Development</span>
+            </div>
+            <span class="card-cta">View Case Study →</span>
+          </div>
+        </a>
+      </article>
+
+    </div><!-- /gridTechartFeature -->
+
     <div class="project-grid" id="gridTechart">
       <article class="project-card" data-category="techart" data-tech-order="0" data-main-order="0">
         <a href="projects/arctic-epoch/index.html#snow" class="card-link">
@@ -583,7 +607,7 @@
         <a href="projects/arctic-epoch/index.html#icicle" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg arctic-gradient"></div>
-            <video data-src="images/card-previews/icicle_simulation_Thumnail-31ef0c0c.mp4" aria-label="Icicle Generator" class="card-img" preload="none" muted loop playsinline poster="images/card-previews/icicle_simulation_Thumnail-31ef0c0c.webp"></video>
+            <video data-src="images/card-previews/icicle_simulation_Thumnail-31ef0c0c.mp4" aria-label="Icicle Generator" class="card-img" preload="none" muted loop playsinline poster="images/card-previews/icicle_simulation_Thumnail-31ef0c0c.jpg"></video>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -596,27 +620,6 @@
               <span class="tag">Simulation</span>
             </div>
             <span class="card-cta">View Project →</span>
-          </div>
-        </a>
-      </article>
-
-      <article id="card-arch" data-featured="true" class="project-card" data-category="techart" data-tech-order="1" data-main-order="2">
-        <a href="projects/Arch_Generator_Tool/index.html" class="card-link">
-          <div class="card-img-wrap">
-            <img src="images/card-previews/brick-arch-thumb.webp" alt="Three brick arch variations generated with the Maya tool" class="card-img" loading="lazy" decoding="async"><span class="card-badge badge-gold">Artist Tool</span>
-            <video data-src="images/card-previews/brick-arch-hover.mp4" aria-label="A brick arch being generated in Maya" class="card-img-hover" preload="none" muted loop playsinline></video>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span class="card-cat">Tech Art &nbsp;·&nbsp; Artist Tool</span></div>
-            <h3 class="card-title">Brick Arch Generator</h3>
-            <p class="card-desc">An artist-facing Maya tool for procedural brick arches, reducing repetitive placement and adding silhouette variation. Used in European Alleyway.</p>
-            <div class="card-tags">
-              <span class="tag">Maya</span>
-              <span class="tag">Python</span>
-              <span class="tag">Artist Tool</span>
-              <span class="tag">LLM-Assisted Development</span>
-            </div>
-            <span class="card-cta">View Case Study →</span>
           </div>
         </a>
       </article>
@@ -645,7 +648,7 @@
       <article class="project-card" data-category="techart" data-tech-order="3" data-main-order="4">
         <a href="projects/arctic-epoch/index.html#ice-shader" class="card-link">
           <div class="card-img-wrap">
-            <video data-src="images/card-previews/opaque_ice2-(1)-9d6323b8.mp4" aria-label="Ice shader with a volumetric appearance in The Arctic Epoch" class="card-img" style="width:115%;height:151%;max-width:none;left:-7%;top:-25%;object-fit:fill;" preload="none" muted loop playsinline poster="images/card-previews/opaque_ice2-(1)-9d6323b8.webp"></video>
+            <video data-src="images/card-previews/opaque_ice2-(1)-9d6323b8.mp4" aria-label="Ice shader with a volumetric appearance in The Arctic Epoch" class="card-img" style="width:115%;height:151%;max-width:none;left:-7%;top:-25%;object-fit:fill;" preload="none" muted loop playsinline poster="images/card-previews/opaque_ice2-(1)-9d6323b8.jpg"></video>
           </div>
           <div class="card-body">
             <div class="card-meta"><span class="card-cat">Tech Art &nbsp;·&nbsp; Unreal Engine 5</span></div>
@@ -699,7 +702,7 @@
         </a>
       </article>
 
-      <article class="project-card" data-category="techart" data-tech-order="7" data-main-order="7" data-filter-only="techart">
+      <article class="project-card" data-category="techart" data-tech-order="7" data-main-order="7" data-filter-only="none">
         <a href="projects/Smoke/index.html" class="card-link">
           <div class="card-img-wrap">
             <div class="card-img-bg arctic-gradient"></div>
@@ -770,6 +773,7 @@
       });
       cardHomes.forEach(({card, parent}) => parent.appendChild(card));
       byId('card-flow').classList.toggle('project-card-feature', filter === 'product');
+      byId('card-arch').classList.toggle('project-card-feature', filter === 'techart');
       if (filter === 'all') {
         ['kitchen', 'alleyway', 'arch'].forEach(id => byId('gridFeaturedCraft').appendChild(byId('card-' + id)));
       } else if (filter === 'product') {
@@ -779,9 +783,10 @@
         .sort((a,b) => Number(a.dataset.techOrder) - Number(b.dataset.techOrder))
         .forEach(card => byId('gridTechart').appendChild(card));
       allCards.forEach(card => {
-        const show = filter === 'all'
+        const only = card.dataset.filterOnly;
+        const show = (only === undefined || only === filter) && (filter === 'all'
           ? card.dataset.featured === 'true' || card.dataset.rapid === 'true'
-          : card.dataset.category.split(' ').includes(filter);
+          : card.dataset.category.split(' ').includes(filter));
         card.classList.toggle('hidden', !show);
       });
       const groups = {

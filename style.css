@@ -1119,7 +1119,8 @@ footer {
 }
 /* Featured view reuses the same project cards as category views. */
 [hidden] { display: none !important; }
-.featured-craft-link { padding: 2rem 5%; text-align: center; }
+.featured-craft-link { padding: 2rem 5%; text-align: center; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.featured-craft-link[hidden] { display: none; }
 #card-alleyway { display: flex; flex-direction: column; }
 #card-alleyway.hidden { display: none; }
 #card-alleyway > .card-link { height: auto; }
